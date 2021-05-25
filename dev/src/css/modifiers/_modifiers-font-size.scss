@@ -1,0 +1,30 @@
+
+// Font Size
+// **************************************
+@for $i from $increment-font-size through $max-font-size {
+    @if ($i + $increment-font-size) % $increment-font-size == 0 {
+        :global .font-size-#{$i} {
+            font-size: #{$i}px;
+        }
+    }
+}
+
+@for $i from $increment-font-size through $max-font-size {
+    @if ($i + $increment-font-size) % $increment-font-size == 0 {
+        @include breakpoint-tablet {
+            :global .tablet-font-size-#{$i} {
+                font-size: #{$i}px;
+            }
+        }
+    }
+}
+
+@for $i from $increment-font-size through $max-font-size {
+    @if ($i + $increment-font-size) % $increment-font-size == 0 {    
+        @include breakpoint-phone-xlg {
+            :global .phone-font-size-#{$i} {
+                font-size: #{$i}px;
+            }
+        }
+    }
+}

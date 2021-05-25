@@ -1,0 +1,47 @@
+{
+  "name": "tailspin",
+  "version": "1.0.0",
+  "description": "CSS Utility Library",
+  "main": "main.js",
+  "scripts": {
+    "watch": "webpack --mode development --config webpack.config.dev.js",
+    "build": "webpack --mode production --config webpack.config.prod.js"
+  },
+  "author": "David Loop",
+  "license": "MIT",
+  "homepage": "https://www.adcetera.com",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/helper-plugin-utils": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "cssnano": "^5.0.1",
+    "devtool": "^2.3.1",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^5.0.2",
+    "img-loader": "^3.0.2",
+    "mini-css-extract-plugin": "^1.5.0",
+    "modularscale-sass": "^3.0.10",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.2.13",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-pixels-to-rem": "^0.8.0",
+    "postcss-preset-env": "^6.7.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.2.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^5.35.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "copy-webpack-plugin": "^6.4.1"
+  }
+}

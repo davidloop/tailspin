@@ -1,0 +1,108 @@
+
+// Breakpoints
+// define breakpoint minimum widths
+// **************************************
+// desktop
+$breakpoint-desktop-large: 1440;
+$breakpoint-desktop-medium: 1365;
+$breakpoint-desktop-small: 1200;
+
+// tablet
+$breakpoint-tablet: 992;
+
+// phone
+$breakpoint-phone-extralarge: 768;
+$breakpoint-phone-large: 600;
+$breakpoint-phone-medium: 480;
+$breakpoint-phone-small: 420;
+
+
+
+// Typography
+// define the typography scale
+//
+// define the base size in rem
+// default is 1rem      : 1rem = 16px
+//
+// define the scale, use the choices below
+//
+// major second         : 1.125
+// minor third          : 1.200
+// major third          : 1.250
+// perfect fourth       : 1.333
+// augmented fourth     : 1.414
+// perfect fifth        : 1.5
+// golden ratio         : 1.618
+//
+// **************************************
+// base
+$base-font-size: 1;
+
+// scale
+$scale: 1.333;
+
+
+
+// Margin
+// define the maximum margin value needed
+//
+// example: margin: 0px to margin: 60px and all values in between
+//
+// **************************************
+$max-margin: 90;
+
+// Padding
+// define the maximum padding value needed
+//
+// example: padding: 0px to padding: 60px and all values in between
+//
+// **************************************
+$max-padding: 60;
+
+
+
+// Font Size
+// define the incremental value needed
+// define the maximum font size value needed
+//
+// example: if the incremental value is 2, and the maximum value is 40,
+// the result is font sizes of 2 through 40, increasing in increments of 2
+// (2, 4, 6, 8, 10, 12, etc.)
+//
+// **************************************
+// increment
+$increment-font-size: 1;
+
+// maximum
+$max-font-size: 60;
+
+
+
+// Z-Index
+// define the incremental value needed
+// define the maximum z-index value needed
+//
+// example: if the incremental value is 5, and the maximum value is 50,
+// the result is a z-index of 5 through 50, increasing in increments of 5
+// (5, 10, 15, 20, 25, etc.)
+//
+// **************************************
+// increment
+$increment-z-index: 5;
+
+// maximum
+$max-z-index: 50;
+
+
+
+// Default Border Color
+// change the border color, can be used for testing
+// **************************************
+$default-border-color: gainsboro;
+
+
+
+// Border Radius
+// define the maximum border radius value needed
+// **************************************
+$max-border-radius: 20;

@@ -1,0 +1,48 @@
+
+@mixin breakpoint-desktop-lg {
+    @media (max-width: ($breakpoint-desktop-large - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop-md {
+    @media (max-width: ($breakpoint-desktop-medium - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop-sm {
+    @media (max-width: ($breakpoint-desktop-small - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-tablet {
+    @media (max-width: ($breakpoint-tablet - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-phone-xlg {
+    @media (max-width: ($breakpoint-phone-extralarge - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-phone-lg {
+    @media (max-width: ($breakpoint-phone-large - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-phone-md {
+    @media (max-width: ($breakpoint-phone-medium - 1px)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-phone-sm {
+    @media (max-width: ($breakpoint-phone-small - 1px)) {
+        @content;
+    }
+}

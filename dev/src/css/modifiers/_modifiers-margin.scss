@@ -1,0 +1,102 @@
+
+// Margin
+// **************************************
+@for $i from 0 through $max-margin {
+    :global .margin-#{$i} {
+        margin: #{$i}px !important;
+    }
+
+    :global .margin-top-#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    :global .margin-bottom-#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    :global .margin-top-bottom-#{$i} {
+        margin-top: #{$i}px !important;
+        margin-bottom: #{$i}px !important;
+    }
+
+    :global .margin-left-#{$i} {
+        margin-left: #{$i}px !important;
+    }
+
+    :global .margin-right-#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    :global .margin-left-right-#{$i} {
+        margin-left: #{$i}px !important;
+        margin-right: #{$i}px !important;
+    }
+}
+
+@include breakpoint-tablet {
+    @for $i from 0 through $max-margin {
+        :global .tablet-margin-#{$i} {
+            margin: #{$i}px !important;
+        }
+    
+        :global .tablet-margin-top-#{$i} {
+            margin-top: #{$i}px !important;
+        }
+    
+        :global .tablet-margin-bottom-#{$i} {
+            margin-bottom: #{$i}px !important;
+        }
+    
+        :global .tablet-margin-top-bottom-#{$i} {
+            margin-top: #{$i}px !important;
+            margin-bottom: #{$i}px !important;
+        }
+
+        :global .tablet-margin-left-#{$i} {
+            margin-left: #{$i}px !important;
+        }
+    
+        :global .tablet-margin-right-#{$i} {
+            margin-right: #{$i}px !important;
+        }
+    
+        :global .tablet-margin-left-right-#{$i} {
+            margin-left: #{$i}px !important;
+            margin-right: #{$i}px !important;
+        }
+    }
+}
+
+@include breakpoint-phone-xlg {
+    @for $i from 0 through $max-margin {
+        :global .phone-margin-#{$i} {
+            margin: #{$i}px !important;
+        }
+    
+        :global .phone-margin-top-#{$i} {
+            margin-top: #{$i}px !important;
+        }
+    
+        :global .phone-margin-bottom-#{$i} {
+            margin-bottom: #{$i}px !important;
+        }
+    
+        :global .phone-margin-top-bottom-#{$i} {
+            margin-top: #{$i}px !important;
+            margin-bottom: #{$i}px !important;
+        }
+
+        :global .phone-margin-left-#{$i} {
+            margin-left: #{$i}px !important;
+        }
+    
+        :global .phone-margin-right-#{$i} {
+            margin-right: #{$i}px !important;
+        }
+    
+        :global .phone-margin-left-right-#{$i} {
+            margin-left: #{$i}px !important;
+            margin-right: #{$i}px !important;
+        }
+    }
+}

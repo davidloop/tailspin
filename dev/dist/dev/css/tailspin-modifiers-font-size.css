@@ -1,0 +1,663 @@
+.font-size-1 {
+  font-size: 0.0625rem; }
+
+.font-size-2 {
+  font-size: 0.125rem; }
+
+.font-size-3 {
+  font-size: 0.1875rem; }
+
+.font-size-4 {
+  font-size: 0.25rem; }
+
+.font-size-5 {
+  font-size: 0.3125rem; }
+
+.font-size-6 {
+  font-size: 0.375rem; }
+
+.font-size-7 {
+  font-size: 0.4375rem; }
+
+.font-size-8 {
+  font-size: 0.5rem; }
+
+.font-size-9 {
+  font-size: 0.5625rem; }
+
+.font-size-10 {
+  font-size: 0.625rem; }
+
+.font-size-11 {
+  font-size: 0.6875rem; }
+
+.font-size-12 {
+  font-size: 0.75rem; }
+
+.font-size-13 {
+  font-size: 0.8125rem; }
+
+.font-size-14 {
+  font-size: 0.875rem; }
+
+.font-size-15 {
+  font-size: 0.9375rem; }
+
+.font-size-16 {
+  font-size: 1rem; }
+
+.font-size-17 {
+  font-size: 1.0625rem; }
+
+.font-size-18 {
+  font-size: 1.125rem; }
+
+.font-size-19 {
+  font-size: 1.1875rem; }
+
+.font-size-20 {
+  font-size: 1.25rem; }
+
+.font-size-21 {
+  font-size: 1.3125rem; }
+
+.font-size-22 {
+  font-size: 1.375rem; }
+
+.font-size-23 {
+  font-size: 1.4375rem; }
+
+.font-size-24 {
+  font-size: 1.5rem; }
+
+.font-size-25 {
+  font-size: 1.5625rem; }
+
+.font-size-26 {
+  font-size: 1.625rem; }
+
+.font-size-27 {
+  font-size: 1.6875rem; }
+
+.font-size-28 {
+  font-size: 1.75rem; }
+
+.font-size-29 {
+  font-size: 1.8125rem; }
+
+.font-size-30 {
+  font-size: 1.875rem; }
+
+.font-size-31 {
+  font-size: 1.9375rem; }
+
+.font-size-32 {
+  font-size: 2rem; }
+
+.font-size-33 {
+  font-size: 2.0625rem; }
+
+.font-size-34 {
+  font-size: 2.125rem; }
+
+.font-size-35 {
+  font-size: 2.1875rem; }
+
+.font-size-36 {
+  font-size: 2.25rem; }
+
+.font-size-37 {
+  font-size: 2.3125rem; }
+
+.font-size-38 {
+  font-size: 2.375rem; }
+
+.font-size-39 {
+  font-size: 2.4375rem; }
+
+.font-size-40 {
+  font-size: 2.5rem; }
+
+.font-size-41 {
+  font-size: 2.5625rem; }
+
+.font-size-42 {
+  font-size: 2.625rem; }
+
+.font-size-43 {
+  font-size: 2.6875rem; }
+
+.font-size-44 {
+  font-size: 2.75rem; }
+
+.font-size-45 {
+  font-size: 2.8125rem; }
+
+.font-size-46 {
+  font-size: 2.875rem; }
+
+.font-size-47 {
+  font-size: 2.9375rem; }
+
+.font-size-48 {
+  font-size: 3rem; }
+
+.font-size-49 {
+  font-size: 3.0625rem; }
+
+.font-size-50 {
+  font-size: 3.125rem; }
+
+.font-size-51 {
+  font-size: 3.1875rem; }
+
+.font-size-52 {
+  font-size: 3.25rem; }
+
+.font-size-53 {
+  font-size: 3.3125rem; }
+
+.font-size-54 {
+  font-size: 3.375rem; }
+
+.font-size-55 {
+  font-size: 3.4375rem; }
+
+.font-size-56 {
+  font-size: 3.5rem; }
+
+.font-size-57 {
+  font-size: 3.5625rem; }
+
+.font-size-58 {
+  font-size: 3.625rem; }
+
+.font-size-59 {
+  font-size: 3.6875rem; }
+
+.font-size-60 {
+  font-size: 3.75rem; }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-1 {
+    font-size: 0.0625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-2 {
+    font-size: 0.125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-3 {
+    font-size: 0.1875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-4 {
+    font-size: 0.25rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-5 {
+    font-size: 0.3125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-6 {
+    font-size: 0.375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-7 {
+    font-size: 0.4375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-8 {
+    font-size: 0.5rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-9 {
+    font-size: 0.5625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-10 {
+    font-size: 0.625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-11 {
+    font-size: 0.6875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-12 {
+    font-size: 0.75rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-13 {
+    font-size: 0.8125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-14 {
+    font-size: 0.875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-15 {
+    font-size: 0.9375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-16 {
+    font-size: 1rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-17 {
+    font-size: 1.0625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-18 {
+    font-size: 1.125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-19 {
+    font-size: 1.1875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-20 {
+    font-size: 1.25rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-21 {
+    font-size: 1.3125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-22 {
+    font-size: 1.375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-23 {
+    font-size: 1.4375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-24 {
+    font-size: 1.5rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-25 {
+    font-size: 1.5625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-26 {
+    font-size: 1.625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-27 {
+    font-size: 1.6875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-28 {
+    font-size: 1.75rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-29 {
+    font-size: 1.8125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-30 {
+    font-size: 1.875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-31 {
+    font-size: 1.9375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-32 {
+    font-size: 2rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-33 {
+    font-size: 2.0625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-34 {
+    font-size: 2.125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-35 {
+    font-size: 2.1875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-36 {
+    font-size: 2.25rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-37 {
+    font-size: 2.3125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-38 {
+    font-size: 2.375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-39 {
+    font-size: 2.4375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-40 {
+    font-size: 2.5rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-41 {
+    font-size: 2.5625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-42 {
+    font-size: 2.625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-43 {
+    font-size: 2.6875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-44 {
+    font-size: 2.75rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-45 {
+    font-size: 2.8125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-46 {
+    font-size: 2.875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-47 {
+    font-size: 2.9375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-48 {
+    font-size: 3rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-49 {
+    font-size: 3.0625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-50 {
+    font-size: 3.125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-51 {
+    font-size: 3.1875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-52 {
+    font-size: 3.25rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-53 {
+    font-size: 3.3125rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-54 {
+    font-size: 3.375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-55 {
+    font-size: 3.4375rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-56 {
+    font-size: 3.5rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-57 {
+    font-size: 3.5625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-58 {
+    font-size: 3.625rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-59 {
+    font-size: 3.6875rem; } }
+
+@media (max-width: 61.9375rem) {
+  .tablet-font-size-60 {
+    font-size: 3.75rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-1 {
+    font-size: 0.0625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-2 {
+    font-size: 0.125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-3 {
+    font-size: 0.1875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-4 {
+    font-size: 0.25rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-5 {
+    font-size: 0.3125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-6 {
+    font-size: 0.375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-7 {
+    font-size: 0.4375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-8 {
+    font-size: 0.5rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-9 {
+    font-size: 0.5625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-10 {
+    font-size: 0.625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-11 {
+    font-size: 0.6875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-12 {
+    font-size: 0.75rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-13 {
+    font-size: 0.8125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-14 {
+    font-size: 0.875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-15 {
+    font-size: 0.9375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-16 {
+    font-size: 1rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-17 {
+    font-size: 1.0625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-18 {
+    font-size: 1.125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-19 {
+    font-size: 1.1875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-20 {
+    font-size: 1.25rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-21 {
+    font-size: 1.3125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-22 {
+    font-size: 1.375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-23 {
+    font-size: 1.4375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-24 {
+    font-size: 1.5rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-25 {
+    font-size: 1.5625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-26 {
+    font-size: 1.625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-27 {
+    font-size: 1.6875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-28 {
+    font-size: 1.75rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-29 {
+    font-size: 1.8125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-30 {
+    font-size: 1.875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-31 {
+    font-size: 1.9375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-32 {
+    font-size: 2rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-33 {
+    font-size: 2.0625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-34 {
+    font-size: 2.125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-35 {
+    font-size: 2.1875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-36 {
+    font-size: 2.25rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-37 {
+    font-size: 2.3125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-38 {
+    font-size: 2.375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-39 {
+    font-size: 2.4375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-40 {
+    font-size: 2.5rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-41 {
+    font-size: 2.5625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-42 {
+    font-size: 2.625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-43 {
+    font-size: 2.6875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-44 {
+    font-size: 2.75rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-45 {
+    font-size: 2.8125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-46 {
+    font-size: 2.875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-47 {
+    font-size: 2.9375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-48 {
+    font-size: 3rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-49 {
+    font-size: 3.0625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-50 {
+    font-size: 3.125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-51 {
+    font-size: 3.1875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-52 {
+    font-size: 3.25rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-53 {
+    font-size: 3.3125rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-54 {
+    font-size: 3.375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-55 {
+    font-size: 3.4375rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-56 {
+    font-size: 3.5rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-57 {
+    font-size: 3.5625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-58 {
+    font-size: 3.625rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-59 {
+    font-size: 3.6875rem; } }
+
+@media (max-width: 47.9375rem) {
+  .phone-font-size-60 {
+    font-size: 3.75rem; } }
+
+/*# sourceURL=/Volumes/Sites/beta.adcetera.com/tailspin/dev/src/css/modifiers/_modifiers-font-size.scss */
+/*# sourceURL=/Volumes/Sites/beta.adcetera.com/tailspin/dev/src/css/helpers/_breakpoints.scss */
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Wb2x1bWVzL1NpdGVzL2JldGEuYWRjZXRlcmEuY29tL3RhaWxzcGluL2Rldi9zcmMvY3NzL21vZGlmaWVycy9fbW9kaWZpZXJzLWZvbnQtc2l6ZS5zY3NzIiwiL1ZvbHVtZXMvU2l0ZXMvYmV0YS5hZGNldGVyYS5jb20vdGFpbHNwaW4vZGV2L3NyYy9jc3MvaGVscGVycy9fYnJlYWtwb2ludHMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFLUTtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGtCQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksbUJBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxpQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLG1CQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksa0JBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGVBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGtCQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksbUJBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxpQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLG1CQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksa0JBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGVBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGtCQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksbUJBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxpQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLG1CQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksa0JBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGVBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxtQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLGtCQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksbUJBQVcsRUFBQTs7QUFEZjtFQUNJLG9CQUFXLEVBQUE7O0FBRGY7RUFDSSxpQkFBVyxFQUFBOztBQURmO0VBQ0ksb0JBQVcsRUFBQTs7QUFEZjtFQUNJLG1CQUFXLEVBQUE7O0FBRGY7RUFDSSxvQkFBVyxFQUFBOztBQURmO0VBQ0ksa0JBQVcsRUFBQTs7QUNjbkI7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksaUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLGVBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLGlCQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksa0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxlQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksa0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxpQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksZUFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksaUJBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDSVQ7RUROUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNJVDtFRE5RO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0lUO0VETlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2Q7O0FDVVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksaUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLGVBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLGlCQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksa0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxlQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksa0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxpQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksZUFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksbUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLGtCQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxtQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG9CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksaUJBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxvQkFBVyxFQUFBLEVBQ2Q7O0FDQVQ7RURGUTtJQUNJLG1CQUFXLEVBQUEsRUFDZDs7QUNBVDtFREZRO0lBQ0ksb0JBQVcsRUFBQSxFQUNkOztBQ0FUO0VERlE7SUFDSSxrQkFBVyxFQUFBLEVBQ2QiLCJmaWxlIjoidGFpbHNwaW4tbW9kaWZpZXJzLWZvbnQtc2l6ZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG4vLyBGb250IFNpemVcbi8vICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqXG5AZm9yICRpIGZyb20gJGluY3JlbWVudC1mb250LXNpemUgdGhyb3VnaCAkbWF4LWZvbnQtc2l6ZSB7XG4gICAgQGlmICgkaSArICRpbmNyZW1lbnQtZm9udC1zaXplKSAlICRpbmNyZW1lbnQtZm9udC1zaXplID09IDAge1xuICAgICAgICA6Z2xvYmFsIC5mb250LXNpemUtI3skaX0ge1xuICAgICAgICAgICAgZm9udC1zaXplOiAjeyRpfXB4O1xuICAgICAgICB9XG4gICAgfVxufVxuXG5AZm9yICRpIGZyb20gJGluY3JlbWVudC1mb250LXNpemUgdGhyb3VnaCAkbWF4LWZvbnQtc2l6ZSB7XG4gICAgQGlmICgkaSArICRpbmNyZW1lbnQtZm9udC1zaXplKSAlICRpbmNyZW1lbnQtZm9udC1zaXplID09IDAge1xuICAgICAgICBAaW5jbHVkZSBicmVha3BvaW50LXRhYmxldCB7XG4gICAgICAgICAgICA6Z2xvYmFsIC50YWJsZXQtZm9udC1zaXplLSN7JGl9IHtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6ICN7JGl9cHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5cbkBmb3IgJGkgZnJvbSAkaW5jcmVtZW50LWZvbnQtc2l6ZSB0aHJvdWdoICRtYXgtZm9udC1zaXplIHtcbiAgICBAaWYgKCRpICsgJGluY3JlbWVudC1mb250LXNpemUpICUgJGluY3JlbWVudC1mb250LXNpemUgPT0gMCB7ICAgIFxuICAgICAgICBAaW5jbHVkZSBicmVha3BvaW50LXBob25lLXhsZyB7XG4gICAgICAgICAgICA6Z2xvYmFsIC5waG9uZS1mb250LXNpemUtI3skaX0ge1xuICAgICAgICAgICAgICAgIGZvbnQtc2l6ZTogI3skaX1weDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbn0iLCJcbkBtaXhpbiBicmVha3BvaW50LWRlc2t0b3AtbGcge1xuICAgIEBtZWRpYSAobWF4LXdpZHRoOiAoJGJyZWFrcG9pbnQtZGVza3RvcC1sYXJnZSAtIDFweCkpIHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuXG5AbWl4aW4gYnJlYWtwb2ludC1kZXNrdG9wLW1kIHtcbiAgICBAbWVkaWEgKG1heC13aWR0aDogKCRicmVha3BvaW50LWRlc2t0b3AtbWVkaXVtIC0gMXB4KSkge1xuICAgICAgICBAY29udGVudDtcbiAgICB9XG59XG5cbkBtaXhpbiBicmVha3BvaW50LWRlc2t0b3Atc20ge1xuICAgIEBtZWRpYSAobWF4LXdpZHRoOiAoJGJyZWFrcG9pbnQtZGVza3RvcC1zbWFsbCAtIDFweCkpIHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuXG5AbWl4aW4gYnJlYWtwb2ludC10YWJsZXQge1xuICAgIEBtZWRpYSAobWF4LXdpZHRoOiAoJGJyZWFrcG9pbnQtdGFibGV0IC0gMXB4KSkge1xuICAgICAgICBAY29udGVudDtcbiAgICB9XG59XG5cbkBtaXhpbiBicmVha3BvaW50LXBob25lLXhsZyB7XG4gICAgQG1lZGlhIChtYXgtd2lkdGg6ICgkYnJlYWtwb2ludC1waG9uZS1leHRyYWxhcmdlIC0gMXB4KSkge1xuICAgICAgICBAY29udGVudDtcbiAgICB9XG59XG5cbkBtaXhpbiBicmVha3BvaW50LXBob25lLWxnIHtcbiAgICBAbWVkaWEgKG1heC13aWR0aDogKCRicmVha3BvaW50LXBob25lLWxhcmdlIC0gMXB4KSkge1xuICAgICAgICBAY29udGVudDtcbiAgICB9XG59XG5cbkBtaXhpbiBicmVha3BvaW50LXBob25lLW1kIHtcbiAgICBAbWVkaWEgKG1heC13aWR0aDogKCRicmVha3BvaW50LXBob25lLW1lZGl1bSAtIDFweCkpIHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuXG5AbWl4aW4gYnJlYWtwb2ludC1waG9uZS1zbSB7XG4gICAgQG1lZGlhIChtYXgtd2lkdGg6ICgkYnJlYWtwb2ludC1waG9uZS1zbWFsbCAtIDFweCkpIHtcbiAgICAgICAgQGNvbnRlbnQ7XG4gICAgfVxufVxuIl19 */

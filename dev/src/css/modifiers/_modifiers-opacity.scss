@@ -1,0 +1,30 @@
+
+// Opacity
+// **************************************
+$i : 0;
+@while $i <= 1 {
+    :global .opacity-#{round($i * 100)} {
+        opacity: $i;
+    }
+    $i : $i + 0.05;
+}
+
+$h : 0;
+@while $h <= 1 {
+    @include breakpoint-tablet {
+        :global .tablet-opacity-#{round($h * 100)} {
+            opacity: $h;
+        }
+    }
+    $h : $h + 0.05;
+}
+
+$j : 0;
+@while $j <= 1 {
+    @include breakpoint-phone-xlg {
+        :global .phone-opacity-#{round($j * 100)} {
+            opacity: $j;
+        }
+    }
+    $j : $j + 0.05;
+}

@@ -1,0 +1,115 @@
+
+// Disable Hovers
+// **************************************
+@mixin nohover {
+  @media (device-width: 1024px) and (orientation: landscape), (max-width: 991px) {
+    @content;
+  }
+}
+
+
+// Flex
+// **************************************
+@mixin flex {
+  display: flex !important;
+}
+
+@mixin flex-inline {
+  display: inline-flex !important;
+}
+
+@mixin justify-content-center {
+  justify-content: center !important;
+}
+
+@mixin justify-content-between {
+  justify-content: space-between !important;
+}
+
+@mixin justify-content-around {
+  justify-content: space-around !important;
+}
+
+@mixin justify-content-start {
+  justify-content: flex-start !important;
+}
+
+@mixin justify-content-end {
+  justify-content: flex-end !important;
+}
+
+@mixin align-items-center {
+  align-items: center !important;
+}
+
+@mixin align-items-start {
+  align-items: flex-start !important;
+}
+
+@mixin align-items-end {
+  align-items: flex-end !important;
+}
+
+@mixin align-items-stretch {
+  align-items: stretch !important;
+}
+
+@mixin flex-row {
+  flex-direction: row !important;
+}
+
+@mixin flex-column {
+  flex-direction: column !important;
+}
+
+@mixin flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+@mixin flex-no-wrap {
+  flex-wrap: nowrap !important;
+}
+
+
+// Centering
+// **************************************
+@mixin center-vert {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-horz {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// Transition default
+// $e = property to animate
+// =============================================
+@mixin trans-pr($e) {
+  -webkit-transition: $e 0.15s ease-out;
+  -moz-transition: $e 0.15s ease-out;
+  -ms-transition: $e 0.15s ease-out;
+  transition: $e 0.15s ease-out;
+}
+
+// Transition custom
+// $d = duration, $t = time
+// =============================================
+// ease | ease-in | ease-out | ease-in-out | linear | cubic-bezier(n, n, n, n) (in decimals)
+@mixin trans-dt($d, $t) {
+  -webkit-transition: all $d $t;
+  -moz-transition: all $d $t;
+  -ms-transition: all $d $t;
+  transition: all $d $t;
+}

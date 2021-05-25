@@ -1,0 +1,24 @@
+
+// Border Radius
+// **************************************
+@for $i from 0 through $max-border-radius {
+    :global .border-radius-#{$i} {
+        border-radius: #{$i}px !important;
+    }
+}
+
+@for $i from 0 through $max-border-radius {
+    @include breakpoint-tablet {
+        :global .tablet-border-radius-#{$i} {
+            border-radius: #{$i}px !important;
+        }
+    }
+}
+
+@for $i from 0 through $max-border-radius {
+    @include breakpoint-phone-xlg {
+        :global .phone-border-radius-#{$i} {
+            border-radius: #{$i}px !important;
+        }
+    }
+}

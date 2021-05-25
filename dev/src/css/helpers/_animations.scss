@@ -1,0 +1,238 @@
+// Shake
+// **************************************
+@keyframes shake {
+
+  8%, 41% {
+    transform: translateX(-15px);
+  }
+
+  25%, 58% {
+    transform: translateX(15px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  92% {
+    transform: translateX(5px);
+  }
+
+  0%, 100% {
+    transform: translateX(0);
+  }
+}
+
+:global {
+
+  .shake {
+    animation: shake 0.5s linear;
+  }
+
+  .shake :local {
+    animation: shake 0.5s linear;
+  }
+}
+
+
+// Bounce
+// **************************************
+@keyframes bounce {
+
+  8%, 41% {
+    transform: translateY(-15px);
+  }
+
+  25%, 58% {
+    transform: translateY(15px);
+  }
+
+  75% {
+    transform: translateY(-5px);
+  }
+
+  92% {
+    transform: translateY(5px);
+  }
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+}
+
+:global {
+
+  .bounce {
+    animation: bounce 0.5s linear;
+  }
+
+  .bounce :local {
+    animation: bounce 0.5s linear;
+  }
+}
+
+
+// Fade in 50
+// **************************************
+@keyframes fadeIn50 {
+  from,
+  100%,
+  to {
+    animation-timing-function: ease-out;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.99;
+  }
+}
+
+:global {
+
+  .fade-in-50 {
+    animation-name: fadeIn50;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  .fade-in-50 :local {
+    animation-name: fadeIn50;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+
+// Fade in 100
+// **************************************
+@keyframes fadeIn100 {
+  from,
+  100%,
+  to {
+    animation-timing-function: ease-out;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.99;
+  }
+}
+
+:global {
+
+  .fade-in-100 {
+    animation-name: fadeIn100;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .fade-in-100 :local {
+    animation-name: fadeIn100;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+}
+
+
+// Fade in 200
+// **************************************
+@keyframes fadeIn200 {
+  from,
+  100%,
+  to {
+    animation-timing-function: ease-out;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.99;
+  }
+}
+
+:global {
+
+  .fade-in-200 {
+    animation-name: fadeIn200;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+
+  .fade-in-200 :local {
+    animation-name: fadeIn200;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+  }
+}
+
+
+// Fade in 300
+// **************************************
+@keyframes fadeIn300 {
+  from,
+  100%,
+  to {
+    animation-timing-function: ease-out;
+  }
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.99;
+  }
+}
+
+:global {
+
+  .fade-in-300 {
+    animation-name: fadeIn300;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+  }
+
+  .fade-in-300 :local {
+    animation-name: fadeIn300;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+  }
+}
+
+
+// Delays
+// **************************************
+:global {
+
+  .delay-10 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-20 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-40 {
+    animation-delay: 0.4s;
+  }
+
+  .delay-60 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-80 {
+    animation-delay: 0.8s;
+  }
+
+  .delay-100 {
+    animation-delay: 1s;
+  }
+}

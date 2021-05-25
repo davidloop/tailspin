@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<title>Tailspin</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" herf="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+<link rel="stylesheet" type="text/css" href="../dev/dist/dev/css/tailspin-all.css">
+
+<style>
+	body {
+		font-family: 'Fira Sans', Arial, sans-serif;
+		position: relative;
+	}
+
+	main {
+		padding: 60px;
+	}
+
+	@media (max-width: 1199px) {
+
+		main {
+			padding: 20px 0 0 0;
+		}
+	}
+
+	:any-link {
+		text-decoration: underline;
+	}
+
+	:any-link:hover {
+		text-decoration: none;
+	}
+
+	ul {
+		margin: -5px 0;
+	}
+
+	ul li {
+		margin: 5px 0;
+	}
+
+	p:last-of-type {
+		margin: 0;
+	}
+
+	p:last-of-type + img {
+		margin: 20px 0 0 0;
+	}
+
+	p:last-of-type + .highlight {
+		margin: 20px 0 0 0;
+	}
+
+	.highlight {
+		margin: 0 0 40px 0;
+		padding: 1.5rem;
+		background: ivory;
+		border: 1px solid gainsboro;
+		border-radius: 3px;
+	}
+
+	pre {
+		margin: 0;
+	}
+
+	.mint {
+		background: mintcream;
+	}
+
+	.gray {
+		color: darkgray;
+	}
+
+	.blue {
+		color: purple;
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+	}
+
+	.box {
+		height: 50px;
+		width: 50px;
+		background: crimson;
+	}
+
+	.box-single {
+		position: relative;
+		left: 0;
+		transform: rotate(0deg);
+		transition-property: all;
+		transition-duration: 0.3s !important;
+		transition-timing-function: linear;
+	}
+
+	.box-single.animate {
+		left: 80%;
+		transform: rotate(360deg);
+	}
+
+	.animation-example {
+		margin: 40px 0;
+	}
+
+	.animation-text {
+		width: 65%;
+	}
+
+	.animation-item {
+		height: 30px;
+		width: 100%;
+		max-width: 200px;
+		position: relative;
+	}
+
+	.item-line {
+		height: 2px;
+		width: 100%;
+		background: lightgray;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+	.item-dot {
+		height: 14px;
+		width: 14px;
+		background: crimson;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		transition-duration: 0.5s !important;
+		z-index: 2;
+	}
+
+	.item-dot.left {
+		left: 100%;
+	}
+
+	.back-to-top {
+		height: 30px;
+		width: 30px;
+		background: #f7f7f7;
+		border: 1px solid gainsboro;
+		border-radius: 3px;
+		opacity: 0;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		transition: opacity 0.15s ease-out;
+	}
+
+	.back-to-top img {
+		height: auto;
+		width: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.back-to-top.visible {
+		opacity: 1;
+	}
+
+	header, footer {
+		background: #f7f7f7;
+		border-color: gainsboro;
+	}
+
+	header {
+		width: 100%;
+		padding: 18px 0;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+
+	header h1 {
+		font-size: 30px;
+		font-weight: 600;
+	}
+
+	footer {
+		padding: 60px 0;
+		border-top-width: 1px;
+		border-top-style: solid;
+	}
+
+	.menu-trigger {
+		height: 30px;
+		width: 30px;
+		border: 1px solid gainsboro;
+		border-radius: 3px;
+		display: block;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		z-index: 3;
+		transition: left 0.15s ease-out;
+	}
+
+	.menu-trigger span {
+		height: 2px;
+		width: calc(100% - 12px);
+		background: black;
+		display: block;
+		position: absolute;
+		left: 6px;
+		transition: all 0.2s ease-out;
+	}
+
+	.menu-trigger span:nth-of-type(1) {
+		top: 50%;
+		transform: translateY(calc(-50% - 6px)) rotate(0deg);
+	}
+
+	.menu-trigger span:nth-of-type(2) {
+		opacity: 1;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.menu-trigger span:nth-of-type(3) {
+		top: 50%;
+		transform: translateY(calc(-50% + 6px)) rotate(0deg);
+	}
+
+	.menu-trigger.open {
+		left: 310px;
+	}
+	
+	.menu-trigger.open span:nth-of-type(1) {
+		top: 50%;
+		transform: translateY(calc(-50% - 0px)) rotate(135deg);
+	}
+
+	.menu-trigger.open span:nth-of-type(2) {
+		opacity: 0;
+	}
+
+	.menu-trigger.open span:nth-of-type(3) {
+		top: 50%;
+		transform: translateY(calc(-50% + 0px)) rotate(225deg);
+	}
+
+	.menu-target {
+		height: 100vh;
+		width: 300px;
+		padding: 45px 0 0 0;
+		background: slategrey;
+		position: fixed;
+		top: 0;
+		left: -300px;
+		z-index: 3;
+		transition: left 0.15s ease-out;
+	}
+
+	.menu-target li:first-of-type {
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.menu-target li {
+		margin: 0;
+		font-size: 14px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.menu-target li a {
+		padding: 12px 20px;
+		color: white;
+		text-decoration: none;
+		display: block;
+		transition: all 0.2s ease-out;
+	}
+
+	.menu-target li a:hover {
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.menu-target.open {
+		left: 0;
+	}
+</style>
+
+</head>
+<body>
+
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+				<div class="padding-left-right-60">
+					<h1>Tailspin</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<main>
+
+	<div class="padding-bottom-45"></div>
+
+	<!-- typography -->
+	<section class="padding-top-bottom-30" id="typography">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Typography</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Typography sizes are based on a <a href="https://www.modularscale.com/" target="_blank">modular scale</a> ratio, written by Tim Brown. There are seven scale ratios to choose from in Tailspin. They do not require breakpoints for responsive sizing since the use of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank">clamp()</a> CSS function allows controlled scaling of the typography sizes as the viewport width is increased or decreased.</p>
+					<p>Default modular scale ratio is 1.333 (Perfect Fourth). Resize the browser to see the scaling in action.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the base font size and modular scale.</p>
+					<p>Base font size is 1 : 1rem = 16px <br />Default modular scale is 1.333 (Perfect Fourth)</p>
+					<p>Only the typography size is controlled, other properties are not included.</p>
+					<img src="images/001.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<h1 class="margin-bottom-10">h1 - This is an H1 heading</h1>
+					<hr class="margin-top-bottom-30">
+					<h2 class="margin-bottom-10">h2 - This is an H2 heading</h2>
+					<hr class="margin-top-bottom-30">
+					<h3 class="margin-bottom-10">h3 - This is an H3 heading</h3>
+					<hr class="margin-top-bottom-30">
+					<h4 class="margin-bottom-10">h4 - This is an H4 heading</h4>
+					<hr class="margin-top-bottom-30">
+					<h5 class="margin-bottom-10">h5 - This is an H5 heading</h5>
+					<hr class="margin-top-bottom-30">
+					<h6 class="margin-bottom-10">h6 - This is an H6 heading</h6>
+					<hr class="margin-top-bottom-30">
+					<p>p - This is a paragraph</small>
+					<hr class="margin-top-bottom-30">
+					<small>small - This is small text</small>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- font sizes -->
+	<section class="padding-top-bottom-30" id="font-sizes">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Font Size</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Not to be confused with typography, Font Size produces a class system that controls the sizing of text. Font Size classes support responsive breakpoints for tablet and phone viewport widths.</p>
+					<p>Pixel units are converted to rem units when compiled : 1rem = 16px</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the incremental value and maximum value for font sizes.</p>
+					<p>If the incremental value is 5, and the maximum font size is 20, the CSS output will produce font sizes starting at 5, and ending at 20. The sizes will increase by a value of 5 until the maxiumum is reached. The larger the maxiumum value is, the more CSS rules are created. This creates a larger CSS file disc size. Be cautious how many sizes are needed.</p>
+					<p>In the example below, the result would be: 1px, 2px, 3px, 4px, 5px, 6px ... 59px, 60px.</p>
+					<img src="images/002.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will apply a font size of 32px to the paragraph, a font size of 20px to the paragraph on a tablet size breakpoint, and a font size of 16px to the paragraph on a phone size breakpoint.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;p class="<span style="color: crimson;">font-size-32 tablet-font-size-20 phone-font-size-16</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+&lt;/p&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<p class="font-size-32 tablet-font-size-20 phone-font-size-16">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+					</div>
+					
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">font-size-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-font-size-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-font-size-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- margin -->
+	<section class="padding-top-bottom-30" id="margin">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Margin</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Margin produces a class system that controls the top, bottom, left, and right margins. Margin classes also support responsive breakpoints for tablet and phone viewport widths. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> utility classes.</p>
+					<p>Pixel units are converted to rem units when compiled : 1rem = 16px</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the maximum value for the amount of margin sizes needed.</p>
+					<p>If the maximum value is 10, there will only be 11 margin rules created. Starting from 0px, which increases by 1px, until 10px is reached. The larger the maxiumum value is, the more CSS rules are created. This creates a larger CSS file disc size. Be cautious how many sizes are needed.</p>
+					<img src="images/003.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will add 30 pixels of margin to the left and right sides of the div block, then 10 pixels of margin on a tablet size breakpoint, then zero pixels of margin on a phone size breakpoint.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">margin-left-right-30 tablet-margin-left-right-10 phone-margin-0</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="margin-left-right-30 tablet-margin-left-right-10 phone-margin-0">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit.
+						 </div>
+					</div>
+					
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported naming patterns:</strong></p>
+
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">margin-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">margin-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-margin-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-margin-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-margin-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-margin-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- padding -->
+	<section class="padding-top-bottom-30" id="padding">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Padding</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Padding produces a class system that controls the top, bottom, left, and right padding. Padding classes also support responsive breakpoints for tablet and phone viewport widths. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> utility classes.</p>
+					<p>Pixel units are converted to rem units when compiled : 1rem = 16px</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the maximum value for the amount of padding sizes needed.</p>
+					<p>If the maximum value is 20, there will only be 21 padding rules created. Starting from 0px, which increases by 1px, until 20px is reached. The larger the maxiumum value is, the more CSS rules are created. This creates a larger CSS file disc size. Be cautious how many sizes are needed.</p>
+					<img src="images/004.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will add 45 pixels of padding to the div block, then 20 pixels of padding to the top and bottom, leaving 45 pixels to the left and right of the div block, on a tablet size breakpoint. Then 10 pixels of padding to the top and bottom, leaving 45 pixels to the left and right of the div block, on a phone size breakpoint.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">padding-45 tablet-padding-top-bottom-20 phone-padding-top-bottom-10</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="padding-45 tablet-padding-top-bottom-20 phone-padding-top-bottom-10">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit.
+						 </div>
+					</div>
+					
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported naming patterns:</strong></p>
+
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">padding-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">padding-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-padding-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">tablet-padding-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-padding-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-top-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-top-bottom-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-left-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-right-</span><span class="gray">[value]</span><br />
+								<span class="blue">phone-padding-left-right-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- z-index -->
+	<section class="padding-top-bottom-30" id="z-index">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Z-Index</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Z-Index produces a class system that dictates the z-index, or position order of an element. Z-Index classes also support responsive breakpoints for tablet and phone viewport widths. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> utility classes.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the incremental value and maximum value for z-index position orders.</p>
+					<p>If the incremental value is 3, and the maxiumum value is 24, the CSS output will produce z-index values starting at 3, and ending at 24. The values will increae by 3 until the maximum value is reached. The larger the maxiumum value is, the more CSS rules are created. This creates a larger CSS file disc size. Be cautious how many sizes are needed.</p>
+					<p>In the example below, the result would be: 5, 10, 15, 20, 25 ... 45, 50.</p>
+					<img src="images/005.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will add z-index of 15 to the blue div block, then a z-index of 5 to the blue div block on a tablet and phone size breakpoint. The red div block will use a constant z-index of 10. Resize the browser to observe the blue div block stack underneath the red div block at tablet and phone size breakpoint widths.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">z-index-15 tablet-z-index-5</span>"&gt;
+   Blue block
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">z-index-10</span>"&gt;
+   Red block
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint" style="height: 150px; position: relative;">
+						<div class="z-index-15 tablet-z-index-5" style="height: 100px; width: 100px; background: blue; position: absolute; top: 1.5rem; left: 1.5rem;">
+							&nbsp;
+						 </div>
+
+						 <div class="z-index-10" style="height: 60px; width: 200px; background: red; position: absolute; top: 2.8rem; left: 2.5rem;">
+							&nbsp;
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">z-index-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-z-index-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-z-index-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- border radius -->
+	<section class="padding-top-bottom-30" id="border-radius">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Border Radius</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Border Radius produces a class system that adds a border radius to an element. The classes also support responsive breakpoints for tablet and phone viewport widths. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> utility classes.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the maximum value for border radius.</p>
+					<p>If the maxiumum value is 20, the CSS output will produce a border radius value starting at 1, and ending at 20, with all values in between.</p>
+					<p>In the example below, the result would be: 1, 2, 3, 4, 5 ... 19, 20.</p>
+					<img src="images/006.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will add a border radius of 3 to the div block, a border radius of 13 to the div block on a tablet size breakpoint, and a border radius of 6 to the div block on a phone size breakpoint.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">border-radius-3 tablet-border-radius-6 phone-border-radius-2</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="border border-radius-3 tablet-border-radius-13 phone-border-radius-6" style="padding: 1.5rem; background: white;">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit.
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">border-radius-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-border-radius-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-border-radius-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- borders, default border color, circles -->
+	<section class="padding-top-bottom-30" id="border-color">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Borders, Default Border Color, & Circles <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>The border utility produces a class system to add a border to any element. The classes support responsive breakpoints for tablet and phone viewport widths. The Default Border Color controls the color for all borders, however the utility does not override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> utility classes. The circle utility produces a class to transform an elenent into a full circle, with support for tablet and phone breakpoint widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Define the border color with a <a href="https://www.w3schools.com/colors/colors_hex.asp" target="_blank">hex value</a> or supported <a href="https://www.w3schools.com/colors/colors_groups.asp" target="_blank">color name</a>.</p>
+					<p>The starting Tailspin color name is 'gainsboro'.</p>
+					<img src="images/007.jpg" alt="">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following examples will add a border, with a border radius of 10 to the first div block, and transform the second div block into a circle.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">border border-radius-10</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">border border-radius-circle</span>"&gt;
+   Circle
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="border border-radius-10" style="padding: 1.5rem; background: white;">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit.
+						 </div>
+
+						 <br />
+
+						 <div class="border border-radius-circle" style="height: 100px; width: 100px; background: white; position: relative;">
+							<span class="center-both">Circle</span>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">border</span><br />
+								<span class="blue">border-top</span><br />
+								<span class="blue">border-bottom</span><br />
+								<span class="blue">border-left</span><br />
+								<span class="blue">border-right</span><br /><br />
+								<span class="blue">border-radius-circle</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-border</span><br />
+								<span class="blue">tablet-border-top</span><br />
+								<span class="blue">tablet-border-bottom</span><br />
+								<span class="blue">tablet-border-left</span><br />
+								<span class="blue">tablet-border-right</span><br /><br />
+								<span class="blue">tablet-border-radius-circle</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-border</span><br />
+								<span class="blue">phone-border-top</span><br />
+								<span class="blue">phone-border-bottom</span><br />
+								<span class="blue">phone-border-left</span><br />
+								<span class="blue">phone-border-right</span><br /><br />
+								<span class="blue">phone-border-radius-circle</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- centering -->
+	<section class="padding-top-bottom-30" id="centering">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Centering <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>This utility class system allows an element to be centered horizontally, vertically, or both, providing the parent containing block element has dimension and a relative position. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>It is important to remember the centering utility classes will not work unless the parent block container has a width, a height, and a relative position.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will transform a div block element into a circle, and center the text inside horiztonally and vertically using a centering utility class.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">border-radius-circle center-both</span>" style="height: 100px; width: 100px; position: relative;"&gt;
+   Circle
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div class="border-radius-circle" style="height: 100px; width: 100px; background: black; position: relative;">
+							<span class="center-both" style="color: white;">Circle</span>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">center-vert</span><br />
+								<span class="blue">center-horz</span><br />
+								<span class="blue">center-both</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-center-vert</span><br />
+								<span class="blue">tablet-center-horz</span><br />
+								<span class="blue">tablet-center-both</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-center-vert</span><br />
+								<span class="blue">phone-center-horz</span><br />
+								<span class="blue">phone-center-both</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- clipping -->
+	<section class="padding-top-bottom-30" id="clipping">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Clipping <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>This utility class system applies an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow" target="_blank">overflow</a> to any element. Overflow is used when an element's content is too large to fit within its block formatting context. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip 1</strong></p>
+					<p>Add <span style="color: crimson;">overflow-y: scroll;</span> to the HTML element in your CSS.</p>
+					<p class="margin-bottom-30">This prevents the scrollbar area on the side of the browser from disappearing and reappearing with interactivity, such as a modal window or full screen element with a fixed position.</p>
+
+					<p><strong>Pro Tip 2</strong></p>
+					<p>Add <span style="color: crimson;">-webkit-overflow-scrolling: touch;</span> to an element that uses an overflow rule that enables a scrollbar. This will initiate smooth momentum scrolling on IOS devices.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example applies a vertical overflow to a div block element, that allows a scrollbar to control content flow.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">overflow-vertical-auto</span>"&gt;
+   Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris dictum arcu lacus ...
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div class="overflow-vertical-auto" style="height: 130px; padding: 1.5rem; background: white; border: 1px solid gainsboro;">
+							Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris dictum arcu lacus eget euismod lorem rhoncus quis. Proin lacus purus pulvinar vitae vestibulum non ultricies vitae elit. Donec lacus dolor, porttitor et fringilla vel tempor a metus. Nulla ex erat, auctor nec dui sit amet, pulvinar pharetra lorem. Etiam pulvinar nunc non quam fermentum, at hendrerit urna dictum. Cras scelerisque aliquet molestie. Vestibulum et lacinia urna. Sed fringilla odio nec vulputate convallis, nibh felis pellentesque arcu, gravida commodo tortor nisi eu tortor. In ut nulla metus. In non magna vel sem hendrerit semper. Sed porttitor consequat ipsum et efficitur. Integer id urna sit amet mauris gravida fringilla commodo sed turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae dui convallis dapibus massa eget facilisis felis. 
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">overflow-hidden</span><br />
+								<span class="blue">overflow-auto</span><br />
+								<span class="blue">overflow-scroll</span><br />
+								<span class="blue">overflow-horizontal-hidden</span><br />
+								<span class="blue">overflow-horizontal-auto</span><br />
+								<span class="blue">overflow-horizontal-scroll</span><br />
+								<span class="blue">overflow-vertical-hidden</span><br />
+								<span class="blue">overflow-vertical-auto</span><br />
+								<span class="blue">overflow-vertical-scroll</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-overflow-hidden</span><br />
+								<span class="blue">tablet-overflow-auto</span><br />
+								<span class="blue">tablet-overflow-scroll</span><br />
+								<span class="blue">tablet-overflow-horizontal-hidden</span><br />
+								<span class="blue">tablet-overflow-horizontal-auto</span><br />
+								<span class="blue">tablet-overflow-horizontal-scroll</span><br />
+								<span class="blue">tablet-overflow-vertical-hidden</span><br />
+								<span class="blue">tablet-overflow-vertical-auto</span><br />
+								<span class="blue">tablet-overflow-vertical-scroll</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-overflow-hidden</span><br />
+								<span class="blue">phone-overflow-auto</span><br />
+								<span class="blue">phone-overflow-scroll</span><br />
+								<span class="blue">phone-overflow-horizontal-hidden</span><br />
+								<span class="blue">phone-overflow-horizontal-auto</span><br />
+								<span class="blue">phone-overflow-horizontal-scroll</span><br />
+								<span class="blue">phone-overflow-vertical-hidden</span><br />
+								<span class="blue">phone-overflow-vertical-auto</span><br />
+								<span class="blue">phone-overflow-vertical-scroll</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- flex order -->
+	<section class="padding-top-bottom-30" id="flex-order">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Flex Order <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items" target="_blank">Flex Order</a> utility classes allow elements within a flexed parent div block container to have their layout order changed without affecting source order. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip</strong></p>
+					<p>Flex Order also applies to elements that are stacked vertically. For example, a card component with an image stacked on top of the body and text can be re-ordered beneath the body and text when a responsive breakpoint width is reached by using the <span class="blue">tablet-order-</span><span class="gray">[value]</span> class.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example adds a flex order of 4 to the first div block, which forces the element to the end of the layout reading left to right.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">order-4</span>"&gt;
+   Div Block 1
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">order-2</span>"&gt;
+   Div Block 2
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">order-3</span>"&gt;
+   Div Block 3
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="display: flex; padding: 1.5rem; background: white; border: 1px solid gainsboro;">
+							
+							<div class="margin-right-20 padding-20 border order-4">
+								Div Block 1
+							</div>
+							<div class="margin-right-20 padding-20 border order-2">
+								Div Block 2
+							</div>
+							<div class="margin-right-20 padding-20 border order-3">
+								Div Block 3
+							</div>
+
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">order-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-order-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-order-</span><span class="gray">[value]</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- ratios -->
+	<section class="padding-top-bottom-30" id="ratios">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Ratios <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Ratio utility classes help maintain an elements aspect ratio. Adding this class to a block level element will automatically set the height based on the element's width at the ratio specified by the classname. These ratios are fully responsive in maintaining an aspect ratio no matter the viewport width. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Ratios are prefect for responsively handling image and video embeds based on the width of the parent container. Resize the browser to see the results scale at smaller viewpoint widths.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">ratio-21x9</span>"&gt;
+   Ratio 21x9
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">ratio-16x9</span>"&gt;
+   Ratio 16x9
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">ratio-4x3</span>"&gt;
+   Ratio 4x3
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">ratio-1x1</span>"&gt;
+   Ratio 1x1
+&lt;/div&gt;</pre>
+					</div>
+					
+					<p><strong>Result</strong></p>
+					<div class="highlight mint" style="display: flex; justify-content: space-between;">
+						<div class="margin-right-20 border ratio-21x9" style="width: 218px; background: white; border: 1px solid gainsboro; position: relative; align-self: flex-start;">
+							<span class="center-both">Ratio 21x9</span>
+						</div>
+						<div class="margin-right-20 border ratio-16x9" style="width: 218px; background: white; border: 1px solid gainsboro; position: relative; align-self: flex-start;">
+							<span class="center-both">Ratio 16x9</span>
+						</div>
+						<div class="margin-right-20 border ratio-4x3" style="width: 218px; background: white; border: 1px solid gainsboro; position: relative; align-self: flex-start;">
+							<span class="center-both">Ratio 4x3</span>
+						</div>
+						<div class="border ratio-1x1" style="width: 218px; background: white; border: 1px solid gainsboro; position: relative; align-self: flex-start;">
+							<span class="center-both">Ratio 1x1</span>
+						</div>
+					</div>
+
+				   	<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">ratio-21x9</span><br />
+								<span class="blue">ratio-16x9</span><br />
+								<span class="blue">ratio-4x3</span><br />
+								<span class="blue">ratio-1x1</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-ratio-21x9</span><br />
+								<span class="blue">tablet-ratio-16x9</span><br />
+								<span class="blue">tablet-ratio-4x3</span><br />
+								<span class="blue">tablet-ratio-1x1</span>
+							</p>
+						</div>
+						<div class="col">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-ratio-21x9</span><br />
+								<span class="blue">phone-ratio-16x9</span><br />
+								<span class="blue">phone-ratio-4x3</span><br />
+								<span class="blue">phone-ratio-1x1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+	
+	<!-- responsive helpers -->
+	<section class="padding-top-bottom-30" id="responsive-helpers">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Responsive Helpers <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Responsive helpers are utility classes that quickly define if an element is displayed at either a responsive breakpoint for desktop viewport widths or at mobile viewport widths. These classes are display values only, this means the class instructs the element to either be hidden or visible depending on the width of the viewport.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>Resize the browser to see results of the responsive helpers working in action.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example will display the first div block element when the viewport is a minimum of 992 pixels wide and up, then a second div block element will display when the viewport width is a maximum of 991 pixels wide and below.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">desktop-only</span>"&gt;
+   Desktop Only
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">mobile-only</span>"&gt;
+   Mobile Only
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="padding-20 border desktop-only" style="width: 200px; background: white; border: 1px solid gainsboro; text-align: center;">
+							Desktop Only
+						</div>
+						<div class="padding-20 border mobile-only" style="width: 200px; background: black; border: 1px solid black; color: white; text-align: center;">
+							Mobile Only
+						</div>
+				   </div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">desktop-only</span><br />
+								<span class="blue">mobile-only</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- media fill to container -->
+	<section class="padding-top-bottom-30" id="media-fill">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Media Fill to Container <span style="color: silver;">(JS & Utilities)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-9">
+					<p>This class relies on a <a href="http://beta.adcetera.com/tailspin/prod/js/tailspin-fill.media.to.container.js" target="_blank">javascript file</a> in order to work.</p>
+					<p>The purpose of this class is for an image to fill its parent block container's height and width. If the image is wider than it is tall, it will automatically apply the <span style="color: crimson;">fill-vertically</span> class. If the image is taller than it is wide, it will apply the <span style="color: crimson;">fill-horizontally</span> class.</p>
+					<p>As the element becomes responsive, the code runs a function that constantly checks for the height and width values of the image or video, and applies the appropriate class that meets a condition. This makes for a seamless experience as the asset scales to its parent block container's dimensions. There should never be any negative space between the image or video, and its parent container.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<hr class="margin-top-bottom-30">
+				</div>
+				<div class="col-xl-9">
+					<p class="margin-bottom-30">The following examples display images that are filled to their parent block container both vertically, and horizontally. The <a href="#ratios">Ratio</a>, <a href="#clipping">Clipping</a>, and <a href="#centering">Centering</a>  classes have been used to set the asset's position, and parent block container's dimension and overflow. However, any height and width dimension can be used on the parent block container.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">ratio-16x9 overflow-hidden</span>" style="width: 300px; position: relative;"&gt;
+   &lt;img src="http://fpoimg.com/960x540" alt="" class="<span style="color: crimson;">js-fill-media-to-container center-both</span>"&gt;
+&lt;/div&gt;</pre>
+					</div>
+					
+					<p><strong>Result</strong></p>
+					<div class="highlight mint" style="display: flex; justify-content: space-between;">
+						<div class="ratio-21x9 overflow-hidden" style="width:  290px;background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>960x540 : Fill Vertically : Ratio 21x9</small>
+							</div>
+							<img src="http://fpoimg.com/960x540" alt="" class="js-fill-media-to-container center-both">
+						</div>
+						
+						<div class="ratio-16x9 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>960x540 : Fill Vertically : Ratio 16x9</small>
+							</div>
+							<img src="http://fpoimg.com/960x540" alt="" class="js-fill-media-to-container center-both">
+						</div>
+
+						<div class="ratio-4x3 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>960x540 : Fill Vertically : Ratio 4x3</small>
+							</div>
+							<img src="http://fpoimg.com/960x540" alt="" class="js-fill-media-to-container center-both">
+						</div>
+
+						<div class="ratio-1x1 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>960x540 : Fill Vertically : Ratio 1x1</small>
+							</div>
+							<img src="http://fpoimg.com/960x540" alt="" class="js-fill-media-to-container center-both">
+						</div>
+				   </div>
+
+				   <div class="padding-bottom-30"></div>
+
+				   <div class="highlight mint" style="display: flex; justify-content: space-between;">
+						<div class="ratio-21x9 overflow-hidden" style="width:  290px;background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>540x960 : Fill Vertically : Ratio 21x9</small>
+							</div>
+							<img src="http://fpoimg.com/540x960" alt="" class="js-fill-media-to-container center-both">
+						</div>
+
+						<div class="ratio-16x9 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>540x960 : Fill Horizontally : Ratio 16x9</small>
+							</div>
+							<img src="http://fpoimg.com/540x960" alt="" class="js-fill-media-to-container center-both">
+						</div>
+
+						<div class="ratio-4x3 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>540x960 : Fill Horizontally : Ratio 4x3</small>
+							</div>
+							<img src="http://fpoimg.com/540x960" alt="" class="js-fill-media-to-container center-both">
+						</div>
+
+						<div class="ratio-1x1 overflow-hidden" style="width: 290px; background: black; position: relative; align-self: flex-start;">
+							<div style="width: 100%; text-align: center; position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); z-index: 2;">
+								<small>540x960 : Fill Horizontally : Ratio 1x1</small>
+							</div>
+							<img src="http://fpoimg.com/540x960" alt="" class="js-fill-media-to-container center-both">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12">
+					<hr class="margin-top-bottom-30">
+				</div>
+
+				<div class="col-9">
+					<p><strong>Pro Tip</strong></p>
+					<p>Use the <a href="#ratios">Ratio</a>, <a href="#clipping">Clipping</a>, and <a href="#centering">Centering</a> classes on the image or video and their parent block container to create a responsively, scalable element with minimal CSS code.</p>
+
+					<div class="padding-bottom-60"></div>
+
+					<p><strong>Use with Video</strong></p>
+					<p class="margin-bottom-30">This example uses a video that has a ratio of 16x9. It is wider than it is tall, and once the page is loaded, gets a class of <span style="color: crimson;">fill-vertically</span> added. The parent div block container does not require a height attribute since the ratio-16x9 class has been added. This element will scale responsively, adjusting the height as the width changes.</p>
+
+					<div class="margin-bottom-15 ratio-16x9 overflow-hidden sample-video-a">
+						<video autoplay muted loop playsinline="true" src="video/16x9.mp4" class="js-fill-media-to-container center-both"></video>
+					</div>
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">ratio-16x9 overflow-hidden</span>"&gt;
+   &lt;video autoplay muted loop playsinline="true" src="<span style="color: darkcyan;">video/16x9.mp4</span>" class="<span style="color: crimson;">js-fill-media-to-container center-both</span>"&gt;&lt;/video&gt;
+&lt;/div&gt;</pre>						
+					</div>
+
+					<div class="padding-bottom-60"></div>
+
+					<p class="margin-bottom-30">This example uses a video that has a ratio of 9x16. It is taller than it is wide, and once the page is loaded, gets a class of <span style="color: crimson;">fill-horizontally</span> added. The parent div block container has an explicit height value via CSS, and this element will not scale responsively, the height will remain the same as the width changes.</p>
+
+					<div class="margin-bottom-15 overflow-hidden sample-video-b">
+						<video autoplay muted loop playsinline="true" src="video/9x16.mp4" class="js-fill-media-to-container center-both"></video>
+					</div>
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">video-container overflow-hidden</span>"&gt;
+   &lt;video autoplay muted loop playsinline="true" src="<span style="color: darkcyan;">video/9x16.mp4</span>" class="<span style="color: crimson;">js-fill-media-to-container center-both</span>"&gt;&lt;/video&gt;
+&lt;/div&gt;
+
+.video-container {
+   height: 300px;
+   position: relative;
+}</pre>						
+					</div>
+
+					<style>
+						.sample-video-a {
+							max-width: 33.333333%;
+							position: relative;
+						}
+
+						.sample-video-b {
+							height: 248px;
+							max-width: 33.333333%;
+							position: relative;
+						}
+					</style>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<div class="row">
+				<div class="col-9">
+					<p><strong>Use with a Banner Background Image</strong></p>
+					<p>This example uses a background image that has a dimension of 1920 pixels wide by 1496 pixels tall. It is wider than it is tall, and once the page is loaded, the class <span style="color: crimson;">fill-horizontally</span> gets added. The parent div block container does not require a height or width attribute. Instead, its using a class of ratio-21x9, and since the banner has no width attribute, it will fill 100% the width of its own parent container. This element will scale responsively, adjusting the height as the width changes.</p>
+					<p class="margin-bottom-30">The additional CSS propteries for max-height and min-height insures the banner has a stopping point for maximum and minimum height values. No matter what these values are, the banner image will always fill the container.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<div class="banner-container border ratio-21x9 overflow-hidden">
+						<img src="images/joe-pohle-BKTXvgH3IRc-unsplash.jpg" alt="" class="js-fill-media-to-container center-both">
+					</div>
+
+					<div class="highlight margin-top-15">
+<pre>&lt;div class="<span style="color: crimson;">banner-container border ratio-21x9 overflow-hidden</span>"&gt;
+    &lt;img src="<span style="color: darkcyan;">images/image.webp</span>" class="<span style="color: crimson;">js-fill-media-to-container center-both</span>"&gt;
+&lt;/div&gt;
+
+.banner-container {
+    max-height: 600px;
+    min-height: 250px;
+    margin: 0 auto;
+    position: relative;
+}</pre>
+					</div>
+
+					<style>
+						.banner-container {
+							max-height: 600px;
+							min-height: 250px;
+							margin: 0 auto;
+							position: relative;
+						}
+					</style>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- animations -->
+	<section class="padding-top-bottom-30" id="animation-helpers">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Animations <span style="color: silver;">(Helpers)</span></h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Animation helpers come in two flavors. The first are group of classes that can be utilized for animations such as fading an element in, or bouncing an element up and down. The second are a group of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function" target="_blank">easing</a> names to add <a href="https://developer.mozilla.org/en-US/docs/Glossary/B%C3%A9zier_curve" target="_blank">cubic-bezier</a> curvitures.</p>
+				</div>
+			</div>
+
+			<div class="padding-bottom-40"></div>
+
+			<div class="row">
+				<div class="col-xl-12">
+					<h5>Animation Classes</h5>
+				</div>
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Important</strong></p>
+					<p>Animation classes are meant to help with interactive events. This means the animations only work when they are added to an element by an interactive mechanism. For example, a javascript click event. If a class is already added to en alement when the page loads, the most likely scenario is no animation will happen.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>As soon as the animation class is added to an element, a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" target="_blank">keyframe at-rule</a> animation is played. The animation will only run once.</p>
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class names with examples:</strong></p>
+					<p class="margin-bottom-30">Desktop to phone</p>
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">shake</p>
+							<div class="margin-top-bottom-20 box-shake-container">
+								<div class="margin-bottom-20">
+									<div class="box box-shake"></div>
+								</div>
+								<a href="#" class="run-animation-box-shake font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box shake</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">bounce</p>
+							<div class="margin-top-bottom-20 box-bounce-container">
+								<div class="margin-bottom-20">
+									<div class="box box-bounce"></div>
+								</div>
+								<a href="#" class="run-animation-box-bounce font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box bounce</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+
+					<hr class="margin-top-bottom-60">
+					
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">fade-in-50</p>
+							<div class="margin-top-bottom-20 box-fadein-container">
+								<div class="margin-bottom-20">
+									<div class="box box-fadein"></div>
+								</div>
+								<a href="#" class="run-animation-box-fadein font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box fade-in-50</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">fade-in-100</p>
+							<div class="margin-top-bottom-20 box-fadein-container">
+								<div class="margin-bottom-20">
+									<div class="box box-fadein"></div>
+								</div>
+								<a href="#" class="run-animation-box-fadein font-size-14">Run animation</a>
+							</div>
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box fade-in-100</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="padding-bottom-60"></div>
+					
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">fade-in-200</p>
+							<div class="margin-top-bottom-20 box-fadein-container">
+								<div class="margin-bottom-20">
+									<div class="box box-fadein"></div>
+								</div>
+								<a href="#" class="run-animation-box-fadein font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box fade-in-200</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">fade-in-300</p>
+							<div class="margin-top-bottom-20 box-fadein-container">
+								<div class="margin-bottom-20">
+									<div class="box box-fadein"></div>
+								</div>
+								<a href="#" class="run-animation-box-fadein font-size-14">Run animation</a>
+							</div>
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box fade-in-300</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+
+					<hr class="margin-top-90 margin-bottom-30">
+
+					<p>Animation delays only use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" target="_blank">animation-delay</a> CSS property, and will only run once. Do not confuse these classes in combination with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" target="_blank">transition</a> CSS properties which use transition-delay.</p>
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class names with examples:</strong></p>
+					<p class="margin-bottom-30">Desktop to phone</p>
+
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">delay-10</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-10</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">delay-20</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-20</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="padding-bottom-60"></div>
+
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">delay-40</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-40</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">delay-60</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-60</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="padding-bottom-60"></div>
+
+					<div class="row">
+						<div class="col-xl-6">
+							<p class="blue">delay-80</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-80</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<p class="blue">delay-100</p>
+							<div class="margin-top-bottom-20 box-delay-container">
+								<div class="margin-bottom-20">
+									<div class="box box-delay box-delay"></div>
+								</div>
+								<a href="#" class="run-animation-box-delay font-size-14">Run animation</a>
+							</div>
+
+							<p><strong>Code</strong></p>
+							<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box delay-100</span>"&gt;&lt;/div&gt;</pre>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<div class="row">
+				<div class="col-xl-12">
+					<h5>Easing Classes</h5>
+				</div>
+
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>How it Works</strong></p>
+					<p>Easing name classes will replace a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">transition-timing-function</a> CSS property. This property controls the acceleration curve over an animation's duration, or the amount of time it takes to complete the animation.</p>
+					<p>In the following example, a simple CSS transition animation is applied to a &lt;div&gt; element. The transition CSS properties include a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">transition-timing-function</a> of 'linear'.</p>
+
+					<div class="easing-example-container margin-top-bottom-20">
+						<div class="easing-example-single margin-bottom-20">
+							<div class="box box-single"></div>
+						</div>
+						<a href="#" class="run-animation-single font-size-14">Run animation</a>
+					</div>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box</span>"&gt;&lt;/div&gt;
+
+.red-box {
+   transition-property: all;
+   transition-duration: 0.3s;
+   transition-timing-function: <span style="color: crimson;">linear</span>;
+}</pre>
+					</div>
+
+					<p>If the class <span style="color: crimson;">easing-in-out-back</span> is added to the &lt;div&gt; element, the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function" target="_blank">transition-timing-function</a> has now changed to the associated easing class name property.</p>
+
+					<div class="easing-example-container-alt margin-top-bottom-20">
+						<div class="easing-example-single margin-bottom-20">
+							<div class="box box-single easing-in-out-back"></div>
+						</div>
+						<a href="#" class="run-animation-single-alt font-size-14">Run animation</a>
+					</div>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">red-box easing-in-out-back</span>"&gt;&lt;/div&gt;</pre>
+					</div>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class names with examples:</strong></p>
+					<p>Desktop to phone</p>
+					<div class="row">
+						<div class="col-xl-3">
+							<div class="animation-example">
+								<p><span class="blue">easing-google</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-linear</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-ease</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-ease-in</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-ease-in-out</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+						</div>
+						
+						<div class="col-xl-3">
+							<div class="animation-example">
+								<p><span class="blue">easing-in-quad</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-cubic</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-quart</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-quint</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-sine</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-expo</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-circ</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-back</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+						</div>
+
+						<div class="col-xl-3">
+							<div class="animation-example">
+								<p><span class="blue">easing-out-quad</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-cubic</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-quart</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-quint</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-sine</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-expo</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-circ</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-out-back</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+						</div>
+
+						<div class="col-xl-3">
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-quad</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-cubic</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-quart</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-quint</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-sine</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-expo</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-circ</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+
+							<div class="animation-example">
+								<p><span class="blue">easing-in-out-back</span></p>
+								<div class="animation-item">
+									<div class="item-dot"></div>
+									<div class="item-line"></div>
+								</div>
+								<a href="#" class="run-animation font-size-14">Run animation</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xl-6">
+				<div class="padding-left-right-60">
+					<p>Version 1.0.0</p>
+				</div>
+			</div>
+			<div class="col-xl-6">
+				<div class="padding-left-right-60 text-right">
+					<p>Copyright &copy; <span class="year"></span> Tailspin. <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<a class="menu-trigger" href="#" title="Menu">
+	<span></span>
+	<span></span>
+	<span></span>
+</a>
+<ul class="list-unstyled menu-target">
+	<li><a href="#typography">Typography</a></li>
+	<li><a href="#font-sizes">Font Size</a></li>
+	<li><a href="#margin">Margin</a></li>
+	<li><a href="#padding">Padding</a></li>
+	<li><a href="#z-index">Z-Index</a></li>
+	<li><a href="#border-radius">Border Radius</a></li>
+	<li><a href="#border-color">Borders, Default Border Color, & Circles (Utilities)</a></li>
+	<li><a href="#centering">Centering (Utilities)</a></li>
+	<li><a href="#clipping">Clipping (Utilities)</a></li>
+	<li><a href="#flex-order">Flex Order (Utilities)</a></li>
+	<li><a href="#ratios">Ratios (Utilities)</a></li>
+	<li><a href="#responsive-helpers">Responsive (Helpers)</a></li>
+	<li><a href="#media-fill">Media File to Container</a></li>
+	<li><a href="#animation-helpers">Animations (Helpers)</a></li>
+</ul>
+
+<a class="back-to-top" href="#" title="Back to top">
+	<img src="./images/icon-angle-up-gray.svg" alt="">
+</a>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="../dev/dist/dev/js/fill.media.to.container.js"></script>
+<script type="text/javascript">
+
+	// Shake animation
+	function boxShake(e) {
+		e.preventDefault();
+		$(".box-shake").addClass('shake');
+		setTimeout(function() {
+			$(".box-shake").removeClass('shake');
+		}, 500);
+	}
+	$(".run-animation-box-shake").on('click', boxShake);	
+
+	// Bounce animation
+	function boxBounce(e) {
+		e.preventDefault();
+		$(".box-bounce").addClass('bounce');
+		setTimeout(function() {
+			$(".box-bounce").removeClass('bounce');
+		}, 500);
+	}
+	$(".run-animation-box-bounce").on('click', boxBounce);
+
+	// Fade animations
+	let fades = [ '50', '100', '200', '300' ];
+	$(".box-fadein").each(function(i, elem) {
+		let theBoxFade = $(elem).addClass('box-fadein-' + fades[i]);
+		let theEvent = $(elem).parents(".box-fadein-container").find('.run-animation-box-fadein').addClass('run-fadein-' + fades[i]);
+		function runFade(e) {
+			e.preventDefault();
+			let newTarget = $(e.target).parents(".box-fadein-container").find(theBoxFade);
+			$(newTarget).addClass('fade-in-' + fades[i]);
+			setTimeout(function() {
+				$(newTarget).removeClass('fade-in-' + fades[i]);
+			}, 1500);
+		}
+		$(theEvent).on('click', runFade);
+	});
+
+	// Delay animations
+	let delays = [ '10', '20', '40', '60', '80', '100' ];
+	$(".box-delay").each(function(i, elem) {
+		let theBoxDelay = $(elem).addClass('box-delay-' + delays[i]);
+		let theEvent = $(elem).parents(".box-delay-container").find('.run-animation-box-delay').addClass('run-delay-' + delays[i]);
+		function runDelay(e) {
+			e.preventDefault();
+			let newTarget = $(e.target).parents(".box-delay-container").find(theBoxDelay);
+			$(newTarget).addClass('fade-in-100 delay-' + delays[i]);
+			setTimeout(function() {
+				$(newTarget).removeClass('fade-in-100 delay-' + delays[i]);
+			}, 1500);
+		}
+		$(theEvent).on('click', runDelay);
+	});
+
+	// Easing how it works
+	function boxSingle(e) {
+		e.preventDefault();
+		let el = $(e.target).parents(".easing-example-container").find(".box-single");
+		if ($(el).hasClass('animate')) {
+			$(el).removeClass('animate');
+		} else {
+			$(el).addClass('animate');
+		}
+	}
+	$(".run-animation-single").on('click', boxSingle);
+
+	function boxSingleAlt(e) {
+		e.preventDefault();
+		let el = $(e.target).parents(".easing-example-container-alt").find(".box-single");
+		if ($(el).hasClass('animate')) {
+			$(el).removeClass('animate');
+		} else {
+			$(el).addClass('animate');
+		}
+	}
+	$(".run-animation-single-alt").on('click', boxSingleAlt);
+
+	// Easing examples
+	$(".animation-example").each( function() {
+		$(this).find(".item-dot").addClass( $(this).find("span").text() );
+	});
+
+	function easeAnimation(e) {
+		e.preventDefault();
+		let el = $(e.target).parents(".animation-example").find(".item-dot");
+		if ($(el).hasClass('left')) {
+			$(el).removeClass('left');
+		} else {
+			$(el).addClass('left');
+		}
+	}
+	$(".run-animation").on('click', easeAnimation);
+
+	// Slide menu out
+	function slideMenu(e) {
+		e.preventDefault();
+		if ($(this).hasClass('open')) {
+			$(this).removeClass('open');
+			$(".menu-target").removeClass('open');
+		} else {
+			$(this).addClass('open');
+			$(".menu-target").addClass('open');
+		}
+	}
+	$(".menu-trigger").on('click', slideMenu);
+
+	// Animate to each section
+	function goToSection() {
+		$("html, body").animate({
+			scrollTop: $( $(this).attr("href") ).offset().top - 105
+		}, 300);
+		$(".menu-trigger").removeClass('open');
+		$(".menu-target").removeClass('open');
+	}
+	$(".menu-target a").on('click', goToSection);
+
+	// Back to top
+	// This is plain JavaScript
+	// John says it's the best
+	const el = document.querySelector('.back-to-top');
+	window.addEventListener('scroll', () => {
+		const scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+		if ( scrolled > 900 ) {
+			el.classList.add('visible');
+		} else {
+			el.classList.remove('visible');
+		}
+	});
+
+	function scrollToTop(e) {
+		e.preventDefault();
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	}
+	el.addEventListener('click', scrollToTop);
+
+	// Year
+	document.querySelector('.year').innerHTML = new Date().getFullYear();
+</script>
+
+</body>
+</html>

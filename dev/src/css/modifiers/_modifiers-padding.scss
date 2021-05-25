@@ -1,0 +1,102 @@
+
+// Padding
+// **************************************
+@for $i from 0 through $max-padding {
+    :global .padding-#{$i} {
+        padding: #{$i}px !important;
+    }
+
+    :global .padding-top-#{$i} {
+        padding-top: #{$i}px !important;
+    }
+
+    :global .padding-bottom-#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+
+    :global .padding-top-bottom-#{$i} {
+        padding-top: #{$i}px !important;
+        padding-bottom: #{$i}px !important;
+    }
+
+    :global .padding-left-#{$i} {
+        padding-left: #{$i}px !important;
+    }
+
+    :global .padding-right-#{$i} {
+        padding-right: #{$i}px !important;
+    }
+
+    :global .padding-left-right-#{$i} {
+        padding-left: #{$i}px !important;
+        padding-right: #{$i}px !important;
+    }
+}
+
+@include breakpoint-tablet {
+    @for $i from 0 through $max-padding {
+        :global .tablet-padding-#{$i} {
+            padding: #{$i}px !important;
+        }
+    
+        :global .tablet-padding-top-#{$i} {
+            padding-top: #{$i}px !important;
+        }
+    
+        :global .tablet-padding-bottom-#{$i} {
+            padding-bottom: #{$i}px !important;
+        }
+    
+        :global .tablet-padding-top-bottom-#{$i} {
+            padding-top: #{$i}px !important;
+            padding-bottom: #{$i}px !important;
+        }
+
+        :global .tablet-padding-left-#{$i} {
+            padding-left: #{$i}px !important;
+        }
+    
+        :global .tablet-padding-right-#{$i} {
+            padding-right: #{$i}px !important;
+        }
+    
+        :global .tablet-padding-left-right-#{$i} {
+            padding-left: #{$i}px !important;
+            padding-right: #{$i}px !important;
+        }
+    }
+}
+
+@include breakpoint-phone-xlg {
+    @for $i from 0 through $max-padding {
+        :global .phone-padding-#{$i} {
+            padding: #{$i}px !important;
+        }
+    
+        :global .phone-padding-top-#{$i} {
+            padding-top: #{$i}px !important;
+        }
+    
+        :global .phone-padding-bottom-#{$i} {
+            padding-bottom: #{$i}px !important;
+        }
+    
+        :global .phone-padding-top-bottom-#{$i} {
+            padding-top: #{$i}px !important;
+            padding-bottom: #{$i}px !important;
+        }
+
+        :global .phone-padding-left-#{$i} {
+            padding-left: #{$i}px !important;
+        }
+    
+        :global .phone-padding-right-#{$i} {
+            padding-right: #{$i}px !important;
+        }
+    
+        :global .phone-padding-left-right-#{$i} {
+            padding-left: #{$i}px !important;
+            padding-right: #{$i}px !important;
+        }
+    }
+}

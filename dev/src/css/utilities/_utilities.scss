@@ -1,0 +1,337 @@
+
+// Centering
+// **************************************
+:global .center-vert {
+  @include center-vert;
+}
+
+:global .center-horz {
+  @include center-horz;
+}
+
+:global .center-both {
+  @include center-both;
+}
+
+@include breakpoint-tablet {
+  :global .tablet-center-vert {
+    @include center-vert;
+  }
+  
+  :global .tablet-center-horz {
+    @include center-horz;
+  }
+  
+  :global .tablet-center-both {
+    @include center-both;
+  }
+}
+
+@include breakpoint-phone-xlg {
+  :global .phone-center-vert {
+    @include center-vert;
+  }
+  
+  :global .phone-center-horz {
+    @include center-horz;
+  }
+  
+  :global .phone-center-both {
+    @include center-both;
+  }
+}
+
+
+// Clipping
+// **************************************
+:global .overflow-hidden {
+  overflow: hidden !important;
+}
+
+:global .overflow-auto {
+  overflow: auto !important;
+}
+
+:global .overflow-scroll {
+  overflow: scroll !important;
+}
+
+:global .overflow-horizontal-hidden {
+  overflow-x: hidden !important;
+}
+
+:global .overflow-horizontal-auto {
+  overflow-x: auto !important;
+}
+
+:global .overflow-horizontal-scroll {
+  overflow-x: scroll !important;
+}
+
+:global .overflow-vertical-hidden {
+  overflow-y: hidden !important;
+}
+
+:global .overflow-vertical-auto {
+  overflow-y: auto !important;
+}
+
+:global .overflow-vertical-scroll {
+  overflow-y: scroll !important;
+}
+
+@include breakpoint-tablet {
+  :global .tablet-overflow-hidden {
+    overflow: hidden !important;
+  }
+  
+  :global .tablet-overflow-auto {
+    overflow: auto !important;
+  }
+  
+  :global .tablet-overflow-scroll {
+    overflow: scroll !important;
+  }
+  
+  :global .tablet-overflow-horizontal-hidden {
+    overflow-x: hidden !important;
+  }
+  
+  :global .tablet-overflow-horizontal-auto {
+    overflow-x: auto !important;
+  }
+  
+  :global .tablet-overflow-horizontal-scroll {
+    overflow-x: scroll !important;
+  }
+  
+  :global .tablet-overflow-vertical-hidden {
+    overflow-y: hidden !important;
+  }
+  
+  :global .tablet-overflow-vertical-auto {
+    overflow-y: auto !important;
+  }
+  
+  :global .tablet-overflow-vertical-scroll {
+    overflow-y: scroll !important;
+  }
+}
+
+@include breakpoint-phone-xlg {
+  :global .phone-overflow-hidden {
+    overflow: hidden !important;
+  }
+  
+  :global .phone-overflow-auto {
+    overflow: auto !important;
+  }
+  
+  :global .phone-overflow-scroll {
+    overflow: scroll !important;
+  }
+  
+  :global .phone-overflow-horizontal-hidden {
+    overflow-x: hidden !important;
+  }
+  
+  :global .phone-overflow-horizontal-auto {
+    overflow-x: auto !important;
+  }
+  
+  :global .phone-overflow-horizontal-scroll {
+    overflow-x: scroll !important;
+  }
+  
+  :global .phone-overflow-vertical-hidden {
+    overflow-y: hidden !important;
+  }
+  
+  :global .phone-overflow-vertical-auto {
+    overflow-y: auto !important;
+  }
+  
+  :global .phone-overflow-vertical-scroll {
+    overflow-y: scroll !important;
+  }
+}
+
+
+// Borders
+// **************************************
+:global .border {
+  border-style: solid !important;
+  border-width: 1px !important;
+}
+
+:global .border-top {
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+}
+
+:global .border-bottom {
+  border-bottom-style: solid !important;
+  border-bottom-width: 1px !important;
+}
+
+:global .border-left {
+  border-left-style: solid !important;
+  border-left-width: 1px !important;
+}
+
+:global .border-right {
+  border-right-style: solid !important;
+  border-right-width: 1px !important;
+}
+
+:global .border, :global .border-top, :global .border-bottom, :global .border-left, :global .border-right {
+  border-color: $default-border-color !important;
+}
+
+@include breakpoint-tablet {
+  :global .tablet-border {
+    border-style: solid !important;
+    border-width: 1px !important;
+  }
+  
+  :global .tablet-border-top {
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+  }
+  
+  :global .tablet-border-bottom {
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+  }
+  
+  :global .tablet-border-left {
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+  }
+  
+  :global .tablet-border-right {
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+  }
+}
+
+@include breakpoint-phone-xlg {
+  :global .phone-border {
+    border-style: solid !important;
+    border-width: 1px !important;
+  }
+  
+  :global .phone-border-top {
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+  }
+  
+  :global .phone-border-bottom {
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+  }
+  
+  :global .phone-border-left {
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+  }
+  
+  :global .phone-border-right {
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+  }
+}
+
+
+// Circles
+// **************************************
+:global .border-radius-circle {
+  border-radius: 50% !important;
+}
+
+@include breakpoint-tablet {
+  :global .tablet-border-radius-circle {
+    border-radius: 50% !important;
+  }
+}
+
+@include breakpoint-phone-xlg {
+  :global .phone-border-radius-circle {
+    border-radius: 50% !important;
+  }
+}
+
+
+// Flex Order
+// **************************************
+@for $i from 1 through 12 {
+  :global .order-#{$i} {
+    order: #{$i} !important;
+  }
+}
+
+@for $i from 1 through 12 {
+  @include breakpoint-tablet {
+    :global .tablet-order-#{$i} {
+      order: #{$i} !important;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  @include breakpoint-phone-xlg {
+    :global .phone-order-#{$i} {
+      order: #{$i} !important;
+    }
+  }
+}
+
+
+// Responsive Helpers
+// **************************************
+@media (min-width: 992px) {
+
+  :global .desktop-only {
+    display: block !important;
+  }
+  
+  :global .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+
+  :global .desktop-only {
+    display: none !important;
+  }
+
+  :global .mobile-only {
+    display: block !important;
+  }
+}
+
+
+// Media Fill to Container
+// **************************************
+:global .js-fill-media-to-container {
+  opacity: 0;
+  transition: opacity 0.4s $easeInOut;
+
+  &.fade-in {
+    opacity: 1;
+  }
+}
+
+:global .fill-vertically {
+  height: 101% !important;
+  max-height: 101% !important;
+  width: auto !important;
+  max-width: none !important;
+}
+
+:global .fill-horizontally {
+  height: auto !important;
+  width: 101% !important;
+  max-width: 101% !important;
+}
