@@ -76,7 +76,7 @@ Tailspin is a compilation of several individual [SCSS](https://sass-lang.com/) f
 #### Modify The SCSS Settings
 
 Tailspin comes packaged with a settings [SCSS](https://sass-lang.com/) file called **\_vars.scss**.  
-This file can be located under **dev\src\css\settings**.
+This file can be located under **\dev\src\css\settings**.
 
 <p>&nbsp;</p>
 
@@ -175,6 +175,26 @@ Below are examples of responsive naming patterns and is a small indication of wh
 
 <p>&nbsp;</p>
 
+***
+
+<p>&nbsp;</p>
+
+### Sample Page & Guide
+
+<p>&nbsp;</p>
+
+A sample page comes packaged with Tailspin that includes all Tailspin functionality, displays explanations with code snippets, and working animation examples. This is the full guide to using the Tailspin library. The page can also be used to test any modifications made to the **\_vars.scss** settings file, and uses the compiled **development** version of the library.
+
+<p>&nbsp;</p>
+
+***
+
+<p>&nbsp;</p>
+
+### Compiling
+
+<p>&nbsp;</p>
+
 There are two different configurations of the compiled SCSS files.
 
 * A version for **development**, used for updates and testing (**webpack.config.dev.js**).
@@ -182,14 +202,14 @@ There are two different configurations of the compiled SCSS files.
 
 <p>&nbsp;</p>
 
-To compile the **development** verison, run the following command within OSX Terminal or Windows Terminal.
+To compile the **development** version, run the following command within OSX Terminal or Windows Terminal.
 ```npm
 npm run watch
 ```
 
 <p>&nbsp;</p>
 
-To compile the **production** verison, run the following command within OSX Terminal or Windows Terminal.
+To compile the **production** version, run the following command within OSX Terminal or Windows Terminal.
 ```npm
 npm run build
 ```
