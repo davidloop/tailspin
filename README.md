@@ -22,10 +22,9 @@ tailspin-utilities-typography.min.css
 tailspin-utilities.min.css
 ```
 
-Include the **_Fill Media to Container_** javascript file.  
+Include the **_Fill Media to Container_** javascript file written by @johnludena.   
 This file will work with either __tailspin-all.min.css__ or __tailspin-utilities.min.css__.
 
 ```html
 tailspin-fill.media.to.container.js
 ```
-Written by [John Ludena](https://github.com/johnludena).
