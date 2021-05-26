@@ -71,7 +71,28 @@ The following code will display a div block, with 30 pixels of padding, and a bo
 
 Tailspin is a compilation of several individual [SCSS](https://sass-lang.com/) files that run through a set of task modules using [Webpack](https://webpack.js.org/). Customizing Tailspin is a two step process. The first process is modifying a configuration [SCSS](https://sass-lang.com/) file called **\_vars.scss**. The second process is compiling all the files using [Webpack](https://webpack.js.org/) and [npm](https://www.npmjs.com/).
 
+<p>&nbsp;</p>
 
+#### Modify The SCSS Settings
+
+Tailspin comes packaged with a settings [SCSS](https://sass-lang.com/) file called **\_vars.scss**. This settings file can be located under dev/src/css/settings. The following items are currently available to modify in the Tailspin library.
+
+* **Border Radius** - define the maximum border radius
+* **Breakpoints** - defining breakpoint minimum widths
+* **Default Border Color** - change the color
+* **Font Sizes** - define an incremental value, and maximum font size   
+_Example - an incremental value of 2 with a maximum size of 40 will produce 2, 4, 6, 8 … 38, 40_
+* **Margins** - define the maximum value needed   
+_Example - margin: 0px to margin: 60px and all values in between_
+* **Padding** - define the maximum value needed   
+_Example - margin: 0px to margin: 60px and all values in between_
+* **Typography** - based on an algorithmic scale, you can define a base size, and a predefined scale
+* **Z-Index** -  define an incremental value, and maximum z-index   
+_Example - an incremental value of 5 with a maximum size of 50 will produce 5, 10, 15, 20 … 45, 50_
+
+
+
+<p>&nbsp;</p>
 
 There are two different configurations of the compiled SCSS files.
 
