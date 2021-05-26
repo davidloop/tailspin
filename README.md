@@ -64,3 +64,33 @@ The following code will display a div block, with 30 pixels of padding, and a bo
 ***
 
 <p>&nbsp;</p>
+
+### How To Customize
+
+<p>&nbsp;</p>
+
+Tailspin is a compilation of several individual SASS files that run through a set of task modules using [Webpack](https://webpack.js.org/). There are two different configurations of the compiled files.
+
+* A version for **development**, used for updates and testing (**webpack.config.dev.js**).
+* A version for **production**, which produces the files to add to projects (**webpack.config.prod.js**).
+
+<p>&nbsp;</p>
+
+To compile the **development** verison, run the following command within OSX Terminal or Windows Terminal:
+```npm
+npm run watch
+```
+
+<p>&nbsp;</p>
+
+To compile the **production** verison, run the following command within OSX Terminal or Windows Terminal:
+```npm
+npm run build
+```
+
+
+
+
+
+
+
