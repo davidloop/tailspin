@@ -4,7 +4,7 @@ Tailspin is a customizable, class-based, utility-first CSS library that helps yo
 
 Tailspin acts as a single source library of truth, for repeating utility styles in your code.
 
-## How To Use
+### How To Use
 
 Choose a Tailspin CSS type for your project. You can either use all of Tailspin, or pick and choose multiple or individual utilities, helpers, and/or modifiers. 
 Each type has its very own CSS file.
