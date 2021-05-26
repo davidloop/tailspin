@@ -21,3 +21,9 @@ tailspin-utilities-ratios.min.css
 tailspin-utilities-typography.min.css
 tailspin-utilities.min.css
 ```
+
+Include the _Fill Media to Container_ javascript file.
+
+```html
+tailspin-fill.media.to.container.js
+```
