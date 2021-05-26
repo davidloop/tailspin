@@ -69,13 +69,18 @@ The following code will display a div block, with 30 pixels of padding, and a bo
 
 <p>&nbsp;</p>
 
-Tailspin is a compilation of several individual [SCSS](https://sass-lang.com/) files that run through a set of task modules using [Webpack](https://webpack.js.org/). Customizing Tailspin is a two step process. The first process is modifying a configuration [SCSS](https://sass-lang.com/) file called **\_vars.scss**. The second process is compiling all the files using [Webpack](https://webpack.js.org/) and [npm](https://www.npmjs.com/).
+Tailspin is a compilation of several individual [SCSS](https://sass-lang.com/) files that run through a set of task modules using [Webpack](https://webpack.js.org/). Customizing Tailspin is a two step process. The first process is modifying a configuration settings [SCSS](https://sass-lang.com/) file called **\_vars.scss**. The second process is compiling all the files using [Webpack](https://webpack.js.org/) and [npm](https://www.npmjs.com/).
 
 <p>&nbsp;</p>
 
 #### Modify The SCSS Settings
 
-Tailspin comes packaged with a settings [SCSS](https://sass-lang.com/) file called **\_vars.scss**. This settings file can be located under dev/src/css/settings. The following items are currently available to modify in the Tailspin library.
+Tailspin comes packaged with a settings [SCSS](https://sass-lang.com/) file called **\_vars.scss**.  
+This file can be located under **dev\src\css\settings**.
+
+<p>&nbsp;</p>
+
+The following items are currently available to modify in the Tailspin library.
 
 * **Border Radius** - define the maximum border radius
 * **Breakpoints** - defining breakpoint minimum widths
@@ -90,7 +95,83 @@ _Example - margin: 0px to margin: 60px and all values in between_
 * **Z-Index** -  define an incremental value, and maximum z-index   
 _Example - an incremental value of 5 with a maximum size of 50 will produce 5, 10, 15, 20 … 45, 50_
 
+<p>&nbsp;</p>
 
+**Here is an example of defining the maximum margin value in the settings file.**   
+Changing the **$max-margins** variable will determine the maximum value margins will end at. Below, the margins start at a minumum value of **0px**, and will end at a maximum value of **90px**, and will produce all values in between.
+
+```scss
+// Margin
+// define the maximum margin value needed
+//
+// example: margin: 0px to margin: 90px and all values in between
+//
+// **************************************
+$max-margin: 90;
+```
+
+The output from the above setting will produce the following CSS.
+
+```scss
+.margin-0 {
+  margin: 0rem !important; }
+.margin-1 {
+  margin: 0.0625rem !important; }
+.margin-2 {
+  margin: 0.125rem !important; }
+  
+// ending at ...
+
+.margin-90 {
+  margin: 5.625rem !important; }
+```
+
+Use the classes in your markup.
+```html
+<div class="margin-left-right-30">
+  <p class="margin-0">This is a paragraph of text.</p>
+</div>
+```
+
+<p>&nbsp;</p>
+
+#### Naming Patterns
+
+Tailspin classes use a consistent naming pattern with full words, no abbreviations.  
+Below are examples of naming patterns and is a small indication of what class names are available.
+
+```html
+.margin-5
+.margin-left-5
+.margin-right-5
+.margin-left-right-5
+.margin-top-5
+.margin-bottom-5
+.margin-top-bottom-5
+
+.border-radius-5
+.border-radius-6
+.border-radius-7
+```
+
+<p>&nbsp;</p>
+
+#### Responsiveness
+
+Some, not all, classes come with a responsive naming pattern.  
+Below are examples of responsive naming patterns and is a small indication of what class names are available.
+
+```html
+.tablet-margin-5
+.tablet-margin-left-5
+.tablet-margin-right-5
+.tablet-margin-left-right-5
+
+.phone-margin-5
+.phone-margin-left-5
+.phone-margin-right-5
+.phone-margin-left-right-5
+```
 
 <p>&nbsp;</p>
 
