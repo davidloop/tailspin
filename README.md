@@ -4,6 +4,8 @@ Tailspin is a customizable, class-based, utility-first CSS library that helps yo
 
 Tailspin acts as a single source library of truth, for repeating utility styles in your code.
 
+Skip the boring stuff, and <a href="https://davidloop.github.io/tailspin/" target="_blank">check out the guide</a>.
+
 <p>&nbsp;</p>
 
 ***
