@@ -20,7 +20,7 @@ module.exports = {
 
   output: {
     filename: "main.bundle.js",
-    path: path.resolve(__dirname, 'dist/prod/')
+    path: path.resolve(__dirname, '../prod/')
   },
 
   devtool: 'cheap-module-source-map',
