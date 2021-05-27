@@ -1,0 +1,31 @@
+{
+  "name": "tailspin.css",
+  "version": "1.0.1",
+  "description": "Tailspin is a customizable, class-based, utility-first, css library that helps you work within the constraints of a unified system.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidloop/tailspin.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "utility-library"
+  ],
+  "author": {
+    "name": "David Loop",
+    "email": "davidloop@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "David Loop",
+      "email": "davidloop@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/davidloop/tailspin/issues"
+  },
+  "homepage": "https://github.com/davidloop/tailspin#readme"
+}
