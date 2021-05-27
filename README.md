@@ -191,6 +191,11 @@ Check out the [sample page guide here](https://davidloop.github.io/tailspin/).
 
 <p>&nbsp;</p>
 
+![Sample Page Screen Shot](samples/images/screenshot.jpg)
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ***
 
 <p>&nbsp;</p>
