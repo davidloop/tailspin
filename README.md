@@ -1,4 +1,4 @@
-# Tailspin
+# Tailspin.css
 
 Tailspin is a customizable, class-based, utility-first CSS library that helps you work within the constraints of a unified system, instead of littering style sheets with arbitrary values. It’s purpose is to help with rapid front-end style development, which is based on consistent design patterns. It can work with any other framework or library such as Bootstrap or React.
 
@@ -42,7 +42,7 @@ tailspin-utilities.min.css
 
 ###### Example
 ```html
-<link rel="stylesheet" type="text/css" href="../prod/css/tailspin-all.css" media="all">
+<link rel="stylesheet" type="text/css" href="tailspin.css/prod/css/tailspin-all.css" media="all">
 ```
 <p>&nbsp;</p>
 
@@ -55,7 +55,7 @@ tailspin-fill.media.to.container.js
 
 ###### Example
 ```html
-<script type="text/javascript" src="../prod/js/fill.media.to.container.js"></script>
+<script type="text/javascript" src="tailspin.css/prod/js/fill.media.to.container.js"></script>
 ```
 
 <p>&nbsp;</p>
