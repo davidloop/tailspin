@@ -51,7 +51,7 @@ tailspin-fill.media.to.container.js
 <p>&nbsp;</p>
 
 3. **Add classes to your code.**   
-The following code will display a div block, with 30 pixels of padding, and a border. The paragraph inside the div block has zero margin, and a font size of 20 (1.25rem).
+The following code will display a div block, with 30 pixels (converted to rems) of padding, and a border. The paragraph inside the div block has zero margin, and a font size of 20 (1.25rem by default).
 
 ```html
 <div class="padding-30 border">
@@ -88,9 +88,9 @@ The following items are currently available to modify in the Tailspin library.
 * **Font Sizes** - define an incremental value, and maximum font size   
 _Example - an incremental value of 2 with a maximum size of 40 will produce 2, 4, 6, 8 … 38, 40_
 * **Margins** - define the maximum value needed   
-_Example - margin: 0px to margin: 60px and all values in between_
+_Example - margin: 0 to margin: 60 and all values in between_
 * **Padding** - define the maximum value needed   
-_Example - margin: 0px to margin: 60px and all values in between_
+_Example - margin: 0 to margin: 60 and all values in between_
 * **Typography** - based on an algorithmic scale, you can define a base size, and a predefined scale
 * **Z-Index** -  define an incremental value, and maximum z-index   
 _Example - an incremental value of 5 with a maximum size of 50 will produce 5, 10, 15, 20 … 45, 50_
@@ -98,7 +98,7 @@ _Example - an incremental value of 5 with a maximum size of 50 will produce 5, 1
 <p>&nbsp;</p>
 
 **Here is an example of defining the maximum margin value in the settings file.**   
-Changing the **$max-margins** variable will determine the maximum value margins will end at. Below, the margins start at a minumum value of **0px**, and will end at a maximum value of **90px**, and will produce all values in between.
+Changing the **$max-margins** variable will determine the maximum value margins will end at. Below, the margins start at a minumum value of **0**, and will end at a maximum value of **90**, and will produce all values in between (0 through 90).
 
 ```scss
 // Margin
