@@ -16,7 +16,15 @@ Skip the boring stuff, and [check out the guide](https://davidloop.github.io/tai
 
 <p>&nbsp;</p>
 
-1. **Choose a Tailspin CSS type for your project. You can either use all of Tailspin, or pick and choose multiple or individual utilities, helpers, and/or modifiers. 
+1. **Install using npm.**
+
+```html
+npm i tailspin.css
+```
+
+<p>&nbsp;</p>
+
+2. **Choose a Tailspin CSS type for your project. You can either use all of Tailspin, or pick and choose multiple or individual utilities, helpers, and/or modifiers. 
 Each type has its very own CSS file.**
 
 ```html
@@ -38,7 +46,7 @@ tailspin-utilities.min.css
 ```
 <p>&nbsp;</p>
 
-2. **Include the _Fill Media to Container_ javascript file written by [John Ludena](https://github.com/johnludena).**   
+3. **Include the _Fill Media to Container_ javascript file written by [John Ludena](https://github.com/johnludena).**   
 This file will work with either **_tailspin-all.min.css_** or **_tailspin-utilities.min.css_**.
 
 ```html
@@ -52,7 +60,7 @@ tailspin-fill.media.to.container.js
 
 <p>&nbsp;</p>
 
-3. **Add classes to your code.**   
+4. **Add classes to your code.**   
 The following code will display a div block, with 30 pixels (converted to rems) of padding, and a border. The paragraph inside the div block has zero margin, and a font size of 20 (1.25rem by default).
 
 ```html
