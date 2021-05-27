@@ -214,6 +214,19 @@ To compile the **production** version, run the following command within OSX Term
 npm run build
 ```
 
+<p>&nbsp;</p>
+
+### Things To Keep in Mind
+
+<p>&nbsp;</p>
+
+* Pixel units are automatically converted to rem units using Webpack.
+* Inline styles will not override Tailspin CSS classes.
+* When customizing the **\_vars.scss** settings file, the larger any maximum values are, the larger the CSS file sizes will be.
+* There are 2 font / typography CSS files, one is for adding generalized font size classes, and one is for establishing a specific font base size, and automatically sizing heading elements. Font size classes can override the heading sizes, but only if a font size class is added to a heading element.
+
+<p>&nbsp;</p>
+
 
 
 
