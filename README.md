@@ -216,14 +216,19 @@ npm run build
 
 <p>&nbsp;</p>
 
+***
+
+<p>&nbsp;</p>
+
 ### Things To Keep in Mind
 
 <p>&nbsp;</p>
 
-* Pixel units are automatically converted to rem units using Webpack.
+* Pixel units are automatically [converted](https://www.npmjs.com/package/postcss-pixels-to-rem) to rem units using [Webpack](https://webpack.js.org/).
 * Inline styles will not override Tailspin CSS classes.
 * When customizing the **\_vars.scss** settings file, the larger any maximum values are, the larger the CSS file sizes will be.
-* There are 2 font / typography CSS files, one is for adding generalized font size classes, and one is for establishing a specific font base size, and automatically sizing heading elements. Font size classes can override the heading sizes, but only if a font size class is added to a heading element.
+* There is a separate font-size CSS files, and the typography CSS file. The font-size CSS file is for adding generalized font size classes, and the typography CSS file is for establishing a specific base font size, and automatically sizing heading elements.
+* Font size classes can override the heading element sizes, but only if a font size class is added to a heading element.
 
 <p>&nbsp;</p>
 
