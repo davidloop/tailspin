@@ -4,7 +4,7 @@ Tailspin is a customizable, class-based, utility-first CSS library that helps yo
 
 Tailspin acts as a single source library of truth, for repeating utility styles in your code.
 
-Skip the boring stuff, and <a href="https://davidloop.github.io/tailspin/" target="_blank">check out the guide</a>.
+Skip the boring stuff, and [check out the guide](https://davidloop.github.io/tailspin/).
 
 <p>&nbsp;</p>
 
@@ -185,7 +185,9 @@ Below are examples of responsive naming patterns and is a small indication of wh
 
 <p>&nbsp;</p>
 
-A sample page comes packaged with Tailspin that includes all Tailspin functionality, displays explanations with code snippets, and working animation examples. This is the full guide to using the Tailspin library. The page can also be used to test any modifications made to the **\_vars.scss** settings file, and uses the compiled **development** version of the library.
+A [sample page](https://davidloop.github.io/tailspin/) comes packaged with Tailspin that includes all Tailspin functionality, displays explanations with code snippets, and working animation examples. The page is a full guide to using the Tailspin library. The page can also be used to test any modifications made to the **\_vars.scss** settings file on a local development environment, and uses the compiled **development** version of the library.
+
+Check out the [sample page guide here](https://davidloop.github.io/tailspin/).
 
 <p>&nbsp;</p>
 
