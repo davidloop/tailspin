@@ -108,7 +108,7 @@ _Example - an incremental value of 5 with a maximum size of 50 will produce 5, 1
 <p>&nbsp;</p>
 
 **Here is an example for defining the maximum margin value in the settings file.**   
-Changing the **$max-margins** variable will determine the maximum value margins will end at. Below, the margins start at a minumum value of **0**, and will end at a maximum value of **90**, and will produce all values in between (0 through 90).
+Changing the **$max-margins** variable will define the maximum value margins will end at. Below, the margins start at a minumum value of **0**, and will end at a maximum value of **90**, and will produce all values in between (0 through 90).
 
 ```scss
 // Margin
