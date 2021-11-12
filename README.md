@@ -97,7 +97,21 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 ```
 
 #### Padding
+
+```html
+<div class="padding-45 tablet-padding-top-bottom-20 phone-padding-top-bottom-10">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+</div>
+```
+
 #### Z-Index
+
+```html
+<div class="z-index-15 tablet-z-index-5">
+   Blue block
+</div>
+```
+
 #### Border Radius
 #### Border and Border Color
 #### Centering
