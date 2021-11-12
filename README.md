@@ -81,6 +81,13 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 
 #### Typography
 #### Font Size
+
+```html
+<p class="font-size-32 tablet-font-size-20 phone-font-size-16">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+</p>
+```
+
 #### Margin
 #### Padding
 #### Z-Index
