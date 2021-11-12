@@ -155,7 +155,7 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 #### Aspect Ratios
 
 ```html
-<div class="ratio-16x9 tablet-ratio-1x1">
+<div class="ratio-16x9 tablet-ratio-4x3 phone-ratio-1x1">
    Ratio 16x9
 </div>
 ```
