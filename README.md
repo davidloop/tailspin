@@ -24,7 +24,7 @@ npm i tailspin.css
 
 <p>&nbsp;</p>
 
-2. **Choose a Tailspin CSS type for your project. You can either use all of Tailspin, or pick and choose multiple or individual utilities, helpers, and/or modifiers. 
+2. **Choose an individual Tailspin CSS file for your project. You can either use all of Tailspin, or pick and choose multiple or individual utilities, helpers, and/or modifiers. 
 Each type has its very own CSS file.**
 
 ```html
