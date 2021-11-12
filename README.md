@@ -80,6 +80,9 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 <p>&nbsp;</p>
 
 #### Typography
+
+![Sample Page Screen Shot](samples/images/typography.jpg)
+
 #### Font Size
 
 ```html
