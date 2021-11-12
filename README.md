@@ -132,7 +132,7 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 
 ```html
 <div class="border-radius-circle" style="height: 100px; width: 100px; position: relative;">
-	<span class="center-both">Circle</span>
+   <span class="center-both">Circle</span>
 </div>
 ```
 
@@ -175,12 +175,8 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 #### Media Containment
 
 ```html
-<div class="desktop-only">
-   Desktop Only
-</div>
-
-<div class="mobile-only">
-   Mobile Only
+<div class="ratio-16x9 overflow-hidden" style="width: 300px; position: relative;">
+   <img src="https://fpoimg.com/960x540" alt="" class="js-fill-media-to-container center-both">
 </div>
 ```
 
