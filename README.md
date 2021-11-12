@@ -89,6 +89,13 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 ```
 
 #### Margin
+
+```html
+<div class="margin-left-right-30 tablet-margin-left-right-10 phone-margin-0">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+</div>
+```
+
 #### Padding
 #### Z-Index
 #### Border Radius
