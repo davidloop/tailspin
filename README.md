@@ -113,7 +113,21 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 ```
 
 #### Border Radius
+
+```html
+<div class="border-radius-3 tablet-border-radius-6 phone-border-radius-2">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+</div>
+```
+
 #### Border and Border Color
+
+```html
+<div class="border border-radius-circle">
+   Circle
+</div>
+```
+
 #### Centering
 #### Clipping
 #### Flex Order
