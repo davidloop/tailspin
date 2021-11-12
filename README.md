@@ -129,13 +129,76 @@ The following code will display a div block, with 30 pixels (converted to rems) 
 ```
 
 #### Centering
+
+```html
+<div class="border-radius-circle" style="height: 100px; width: 100px; position: relative;">
+	<span class="center-both">Circle</span>
+</div>
+```
+
 #### Clipping
+
+```html
+<div class="overflow-vertical-auto">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit ...
+</div>
+```
+
 #### Flex Order
+
+```html
+<div class="order-3 tablet-order-2 phone-order-1">
+   Div Block 3
+</div>
+```
+
 #### Aspect Ratios
+
+```html
+<div class="ratio-16x9 tablet-ratio-1x1">
+   Ratio 16x9
+</div>
+```
+
 #### Responsive Helpers
+
+```html
+<div class="desktop-only">
+   Desktop Only
+</div>
+
+<div class="mobile-only">
+   Mobile Only
+</div>
+```
+
 #### Media Containment
+
+```html
+<div class="desktop-only">
+   Desktop Only
+</div>
+
+<div class="mobile-only">
+   Mobile Only
+</div>
+```
+
 #### Basic Animations
+
+```html
+<div class="bounce delay-20 fade-in-300">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.   
+</div>
+```
+
 #### Easing Classes
+
+```html
+<div class="easing-in-out-back">
+   Lorem ipsum dolor sit amet consectetur adipiscing elit.
+</div>
+```
 
 <p>&nbsp;</p>
 
