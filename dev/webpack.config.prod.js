@@ -12,6 +12,7 @@ module.exports = {
       "./src/css/tailspin-modifiers-font-size.scss",
       "./src/css/tailspin-modifiers-border-radius.scss",
       "./src/css/tailspin-modifiers-opacity.scss",
+      "./src/css/tailspin-modifiers-tables.scss",
       "./src/css/tailspin-modifiers-z-index.scss",
       "./src/css/tailspin-utilities.scss",
       "./src/css/tailspin-utilities-ratios.scss",
