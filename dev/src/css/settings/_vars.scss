@@ -1,6 +1,7 @@
 
 // Breakpoints
 // define breakpoint minimum widths
+//
 // **************************************
 // desktop
 $breakpoint-desktop-large: 1440;
@@ -97,6 +98,7 @@ $max-z-index: 50;
 
 // Default Border Color
 // change the border color, can be used for testing
+//
 // **************************************
 $default-border-color: gainsboro;
 
@@ -104,5 +106,17 @@ $default-border-color: gainsboro;
 
 // Border Radius
 // define the maximum border radius value needed
+//
 // **************************************
 $max-border-radius: 20;
+
+
+
+// Responsive Table Breakpoint
+// define the breakpoint width a table element will display in mobile
+//
+// widths are determined from Breakpoints defined in this document above
+// default is $breakpoint-tablet
+//
+// **************************************
+$breakpoint-table: $breakpoint-tablet;

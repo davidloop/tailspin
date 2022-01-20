@@ -46,3 +46,9 @@
         @content;
     }
 }
+
+@mixin breakpoint-table {
+    @media (max-width: ($breakpoint-table - 1px)) {
+        @content;
+    }
+}

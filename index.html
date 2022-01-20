@@ -69,6 +69,11 @@
 		border-radius: 3px;
 	}
 
+	.highlight.overflow	{
+		max-height: 250px;
+		overflow-x: auto;
+	}
+
 	pre {
 		margin: 0;
 	}
@@ -622,104 +627,363 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xl-5">
+				<div class="col-xl-6">
 					<hr class="margin-top-bottom-30">
-				</div>
-				<div class="col-xl-7">
-					<hr class="margin-top-bottom-30">
-					<p><strong>Result</strong></p>
-					<div class="highlight mint">
-						<table class="table table-centered table-white">
-							<thead>
-								<tr>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<div class="padding-bottom-30"></div>
-
-						<table class="table table-stripped table-white">
-							<thead>
-								<tr>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-									<th>Table head</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-								<tr>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-									<td>Table cell</td>
-								</tr>
-							</tbody>
-						</table>
+					<p><strong>Default Table</strong></p>
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;table class="<span style="color: crimson;">table</span>"&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</pre>
 					</div>
+					<p class="margin-bottom-15"><strong>Result</strong></p>
+					<table class="table">
+						<caption>Default Table Caption</caption>
+						<thead>
+							<tr>
+								<th scope="col">Table head 1</th>
+								<th scope="col">Table head 2</th>
+								<th scope="col">Table head 3</th>
+								<th scope="col">Table head 4</th>
+								<th scope="col">Table head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-xl-6">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Stripped Table</strong></p>
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;table class="<span style="color: crimson;">table table-stripped</span>"&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<p class="margin-bottom-15"><strong>Result</strong></p>
+					<table class="table table-stripped table-white">
+						<caption>Stripped Table Caption</caption>
+						<thead>
+							<tr>
+								<th scope="col">Table head 1</th>
+								<th scope="col">Table head 2</th>
+								<th scope="col">Table head 3</th>
+								<th scope="col">Table head 4</th>
+								<th scope="col">Table head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col-12">
+					<div class="padding-bottom-10"></div>
+				</div>
+
+				<div class="col-xl-6">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Default Dark Table</strong></p>
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;table class="<span style="color: crimson;">table table-dark</span>"&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<p class="margin-bottom-15"><strong>Result</strong></p>
+					<table class="table table-dark">
+						<caption>Default Dark Table Caption</caption>
+						<thead>
+							<tr>
+								<th scope="col">Table head 1</th>
+								<th scope="col">Table head 2</th>
+								<th scope="col">Table head 3</th>
+								<th scope="col">Table head 4</th>
+								<th scope="col">Table head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-xl-6">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Stripped Dark Table</strong></p>
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;table class="<span style="color: crimson;">table table-dark table-stripped</span>"&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th&gt;Table head&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td&gt;Table cell&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<p class="margin-bottom-15"><strong>Result</strong></p>
+					<table class="table table-dark table-stripped">
+						<caption>Stripped Dark Table Caption</caption>
+						<thead>
+							<tr>
+								<th scope="col">Table head 1</th>
+								<th scope="col">Table head 2</th>
+								<th scope="col">Table head 3</th>
+								<th scope="col">Table head 4</th>
+								<th scope="col">Table head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
 	<div class="padding-bottom-60"></div>
 
 	<!-- z-index -->
