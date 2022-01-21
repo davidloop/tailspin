@@ -618,47 +618,55 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<h4 class="margin-bottom-25" style="color: crimson;">Tables</h4>
+					<h4 class="margin-bottom-25" style="color: crimson;">Responsive Tables</h4>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xl-7">
-					<p>Classes for styling tables and table elements. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> table classes.</p>
+					<p>Settings and classes for styling responsive tables and table elements. These classes will override <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> table classes.</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xl-6">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+				</div>
+				<div class="col-xl-7">
 					<hr class="margin-top-bottom-30">
 					<p><strong>Default Table</strong></p>
 					<p><strong>Code</strong></p>
 					<div class="highlight overflow">
 <pre>&lt;table class="<span style="color: crimson;">table</span>"&gt;
+   &lt;caption&gt;Default Table Caption&lt;/caption&gt;
    &lt;thead&gt;
       &lt;tr&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 1&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 2&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 3&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 4&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 5&lt;/th&gt;
       &lt;/tr&gt;
    &lt;/thead&gt;
    &lt;tbody&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
    &lt;/tbody&gt;
 &lt;/table&gt;</pre>
@@ -713,39 +721,43 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
-				<div class="col-xl-6">
-					<hr class="margin-top-bottom-30">
+
+					<hr class="margin-top-45 margin-bottom-35">
+
 					<p><strong>Stripped Table</strong></p>
 					<p><strong>Code</strong></p>
 					<div class="highlight overflow">
 <pre>&lt;table class="<span style="color: crimson;">table table-stripped</span>"&gt;
    &lt;thead&gt;
       &lt;tr&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 1&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 2&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 3&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 4&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 5&lt;/th&gt;
       &lt;/tr&gt;
    &lt;/thead&gt;
    &lt;tbody&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
    &lt;/tbody&gt;
 &lt;/table&gt;</pre>
@@ -800,44 +812,43 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
 
-				<div class="col-12">
-					<div class="padding-bottom-10"></div>
-				</div>
+					<hr class="margin-top-45 margin-bottom-35">
 
-				<div class="col-xl-6">
-					<hr class="margin-top-bottom-30">
 					<p><strong>Default Dark Table</strong></p>
 					<p><strong>Code</strong></p>
 					<div class="highlight overflow">
 <pre>&lt;table class="<span style="color: crimson;">table table-dark</span>"&gt;
    &lt;thead&gt;
       &lt;tr&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 1&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 2&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 3&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 4&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 5&lt;/th&gt;
       &lt;/tr&gt;
    &lt;/thead&gt;
    &lt;tbody&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
    &lt;/tbody&gt;
 &lt;/table&gt;</pre>
@@ -892,39 +903,43 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
-				<div class="col-xl-6">
-					<hr class="margin-top-bottom-30">
+				
+					<hr class="margin-top-45 margin-bottom-35">
+
 					<p><strong>Stripped Dark Table</strong></p>
 					<p><strong>Code</strong></p>
 					<div class="highlight overflow">
 <pre>&lt;table class="<span style="color: crimson;">table table-dark table-stripped</span>"&gt;
    &lt;thead&gt;
       &lt;tr&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
-         &lt;th&gt;Table head&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 1&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 2&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 3&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 4&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 5&lt;/th&gt;
       &lt;/tr&gt;
    &lt;/thead&gt;
    &lt;tbody&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
-         &lt;td&gt;Table cell&lt;/td&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
       &lt;/tr&gt;
    &lt;/tbody&gt;
 &lt;/table&gt;</pre>
@@ -932,6 +947,97 @@
 					<p class="margin-bottom-15"><strong>Result</strong></p>
 					<table class="table table-dark table-stripped">
 						<caption>Stripped Dark Table Caption</caption>
+						<thead>
+							<tr>
+								<th scope="col">Table head 1</th>
+								<th scope="col">Table head 2</th>
+								<th scope="col">Table head 3</th>
+								<th scope="col">Table head 4</th>
+								<th scope="col">Table head 5</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+							<tr>
+								<td scope="row" data-label="Table head 1">Table cell 1</td>
+								<td data-label="Table head 2">Table cell 2</td>
+								<td data-label="Table head 3">Table cell 3</td>
+								<td data-label="Table head 4">Table cell 4</td>
+								<td data-label="Table head 5">Table cell 5</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<hr class="margin-top-45 margin-bottom-35">
+
+					<p><strong>Centered Table</strong></p>
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;table class="<span style="color: crimson;">table table-centered</span>"&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;th scope="col"&gt;Table head 1&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 2&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 3&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 4&lt;/th&gt;
+         &lt;th scope="col"&gt;Table head 5&lt;/th&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td scope="row" data-label="Table head 1"&gt;Table cell 1&lt;/td&gt;
+         &lt;td data-label="Table head 2"&gt;Table cell 2&lt;/td&gt;
+         &lt;td data-label="Table head 3"&gt;Table cell 3&lt;/td&gt;
+         &lt;td data-label="Table head 4"&gt;Table cell 4&lt;/td&gt;
+         &lt;td data-label="Table head 5"&gt;Table cell 5&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+					</div>
+					<p class="margin-bottom-15"><strong>Result</strong></p>
+					<table class="table table-centered">
+						<caption>Centered Table Caption</caption>
 						<thead>
 							<tr>
 								<th scope="col">Table head 1</th>
