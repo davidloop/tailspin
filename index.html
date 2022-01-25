@@ -325,6 +325,169 @@
 
 	<div class="padding-bottom-45"></div>
 
+	<!-- breakpoints -->
+	<section class="padding-top-bottom-30" id="breakpoints">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Responsive Breakpoints</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p>Responsive breakpoints are <a href="https://sass-lang.com/" target="+blank">SCSS</a> (or SASS) mixins that not only change the breakpoints for various Tailspin classes and utiliies, but can also be used in additional custom SASS based CSS along side the Tailspin library. If another library or framework is used that supports responsive design, such as <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, the additional library or framework is not affected by Tailspin's responsive breakpoints.</p>
+					<p>Resize the browser to see responsive breakpoints in action.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p>There are 8 breakpoints available.</p>
+					<p>Depending on the breakpoint definitions, either a dekstop or mobile first approach to using the breakpoint mixins can be implemented.</p>
+					<img src="samples/images/009.jpg" alt="">
+					<div class="row margin-top-30">
+						<div class="col">
+							<p>Use the breakpoint mixins in any custom SASS based CSS.</p>
+							<p style="font-size: 14px;">.custom-class {<br/>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: red;<br /><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-tablet</span> {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: green;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-phone-extralarge</span> {<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: blue;<br />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+							}</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;div class="<span style="color: crimson;">responsive-breakpoints</span>"&gt;
+   Resize the browser to see responsive breakpoints in action.
+&lt;/div&gt;
+
+<span style="color: orangered">Custom SCSS using responsive breakpoint mixins</span>
+
+.responsive-breakpoints {
+   background: white;
+
+   @include <span style="color: crimson;">breakpoint-desktop-lg</span> {
+      background: cornsilk;
+   }
+
+   @include <span style="color: crimson;">breakpoint-desktop-medium</span> {
+      background: lightcyan;
+   }
+  
+   @include <span style="color: crimson;">breakpoint-desktop-small</span> {
+      background: mistyrose;
+   }
+
+   @include <span style="color: crimson;">breakpoint-tablet</span> {
+      background: seashell;
+   }
+
+   @include <span style="color: crimson;">breakpoint-phone-xlg</span> {
+      background: lightgreen;
+   }
+
+   @include <span style="color: crimson;">breakpoint-phone-lg</span> {
+      background: powderblue;
+   }
+
+   @include <span style="color: crimson;">breakpoint-phone-md</span> {
+      background: honeydew;
+   }
+
+   @include <span style="color: crimson;">breakpoint-phone-sm</span> {
+      background: paleturquoise;
+   }
+}</pre>
+					</div>
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						<div class="padding-top-bottom-60 padding-left-right-60 border text-center" id="custom-class">
+							<p>Resize the browser to see responsive breakpoints in action.</p>
+						</div>
+						<style>
+							[id=custom-class] {
+								background: white;
+							}
+							@media (max-width: 1439px) {
+								[id=custom-class] {
+									background: cornsilk;
+								}
+							}
+							@media (max-width: 1365px) {
+								[id=custom-class] {
+									background: lightcyan;
+								}
+							}
+							@media (max-width: 1199px) {
+								[id=custom-class] {
+									background: mistyrose;
+								}
+							}
+							@media (max-width: 991px) {
+								[id=custom-class] {
+									background: seashell;
+								}
+							}
+							@media (max-width: 767px) {
+								[id=custom-class] {
+									background: lightgreen;
+								}
+							}
+							@media (max-width: 599px) {
+								[id=custom-class] {
+									background: powderblue;
+								}
+							}
+							@media (max-width: 479px) {
+								[id=custom-class] {
+									background: honeydew;
+								}
+							}
+							@media (max-width: 419px) {
+								[id=custom-class] {
+									background: paleturquoise;
+								}
+							}
+						</style>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported naming patterns:</strong></p>
+
+					<div class="row margin-top-20">
+						<div class="col">
+							<p>
+								<span class="blue">breakpoint-desktop-lg</span><br />
+								<span class="blue">breakpoint-desktop-md</span><br />
+								<span class="blue">breakpoint-desktop-sm</span><br />
+							</p>
+						</div>
+						<div class="col">
+							<p>
+								<span class="blue">breakpoint-tablet</span><br />
+							</p>
+						</div>
+						<div class="col">
+							<p>
+								<span class="blue">breakpoint-phone-xlg</span><br />
+								<span class="blue">breakpoint-phone-lg</span><br />
+								<span class="blue">breakpoint-phone-md</span><br />
+								<span class="blue">breakpoint-phone-sm</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- typography -->
 	<section class="padding-top-bottom-30" id="typography">
 		<div class="container-fluid">
@@ -335,7 +498,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xl-7">
-					<p>Typography sizes are based on a <a href="https://www.modularscale.com/" target="_blank">modular scale</a> ratio, written by Tim Brown. There are seven scale ratios to choose from in Tailspin. They do not require breakpoints for responsive sizing since the use of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank">clamp()</a> CSS function allows controlled scaling of the typography sizes as the viewport width is increased or decreased.</p>
+					<p>Typography sizes are based on a <a href="https://www.modularscale.com/" target="_blank">modular scale</a> ratio, written by <a href="https://tbrown.org/" target="_blank">Tim Brown</a>. There are seven scale ratios to choose from in Tailspin. They do not require breakpoints for responsive sizing since the use of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank">clamp()</a> CSS function allows controlled scaling of the typography sizes as the viewport width is increased or decreased.</p>
 					<p>Default modular scale ratio is 1.333 (Perfect Fourth). Resize the browser to see the scaling in action.</p>
 				</div>
 			</div>
@@ -629,6 +792,34 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<hr class="margin-top-bottom-30">
+					<p>Define the responsive breakpoint that tables will support mobile device widths.</p>
+					<img src="samples/images/008.jpg" alt="">
+
+					
+					<div class="row margin-top-30">
+						<div class="col-lg-6">
+							<p><strong>Supported table class names:</strong></p>
+							<p>
+								<span class="blue">table</span><br />
+								<span class="blue">table-dark</span><br />
+								<span class="blue">table-stripped</span><br />
+								<span class="blue">table-centered</span><br />
+							</p>
+						</div>
+						<div class="col-lg-6">
+							<p><strong>Supported breakpoint names:</strong></p>
+							<p>
+								<span class="blue">$breakpoint-desktop-large</span><br />
+								<span class="blue">$breakpoint-desktop-medium</span><br />
+								<span class="blue">$breakpoint-desktop-small</span><br />
+								<span class="blue">$breakpoint-tablet</span><br />
+								<span class="blue">$breakpoint-phone-extralarge</span><br />
+								<span class="blue">$breakpoint-phone-large</span><br />
+								<span class="blue">$breakpoint-phone-medium</span><br />
+								<span class="blue">$breakpoint-phone-small</span><br />
+							</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-xl-7">
 					<hr class="margin-top-bottom-30">
@@ -1594,7 +1785,7 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<hr class="margin-top-bottom-30">
-					<p>Ratios are prefect for responsively handling image and video embeds based on the width of the parent container. Resize the browser to see the results scale at smaller viewpoint widths.</p>
+					<p>Ratios are prefect for handling responsive image and video embeds based on the width of the parent container. Resize the browser to see the results scale at smaller viewpoint widths.</p>
 				</div>
 				<div class="col-xl-7">
 					<hr class="margin-top-bottom-30">
@@ -2507,6 +2698,7 @@
 	<span></span>
 </a>
 <ul class="list-unstyled menu-target">
+	<li><a href="#breakpoints">Responsive Breakpoints</a></li>
 	<li><a href="#typography">Typography</a></li>
 	<li><a href="#font-sizes">Font Size</a></li>
 	<li><a href="#margin">Margin</a></li>
