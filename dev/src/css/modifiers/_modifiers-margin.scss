@@ -33,7 +33,7 @@
     }
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
     @for $i from 0 through $max-margin {
         :global .tablet-margin-#{$i} {
             margin: #{$i}px !important;
@@ -67,7 +67,7 @@
     }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
     @for $i from 0 through $max-margin {
         :global .phone-margin-#{$i} {
             margin: #{$i}px !important;

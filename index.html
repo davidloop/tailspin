@@ -7,6 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 
 <title>Tailspin</title>
 <meta name="description" content="">
@@ -67,6 +69,7 @@
 		background: ivory;
 		border: 1px solid gainsboro;
 		border-radius: 3px;
+		font-size: 14px;
 	}
 
 	.highlight.overflow	{
@@ -342,21 +345,36 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<hr class="margin-top-bottom-30">
-					<p>There are 8 breakpoints available.</p>
-					<p>Depending on the breakpoint definitions, either a dekstop or mobile first approach to using the breakpoint mixins can be implemented.</p>
+					<p>Depending on the breakpoint mixin used, both a dekstop or mobile first approach are supported.</p>
+					<p>The definitions for desktop first breakpoints are created by using a mixin name that is appended by <span class="blue">max</span>, and the mobile first breakpoints are created using a mixin name that is appended by <span class="blue">min</span>.</p>
+					<p>There are <strong>8 breakpoints</strong> available. Use the mixins in any custom SASS based CSS.</p>
 					<img src="samples/images/009.jpg" alt="">
 					<div class="row margin-top-30">
-						<div class="col">
-							<p>Use the breakpoint mixins in any custom SASS based CSS.</p>
-							<p style="font-size: 14px;">.custom-class {<br/>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: red;<br /><br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-tablet</span> {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: green;<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-phone-extralarge</span> {<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: blue;<br />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-							}</p>
+						<div class="col-xl-6">
+							<p><strong>Desktop first</strong></p>
+							<p>Max-width, the given screen size or smaller.</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">.custom-class {</p>
+							<p class="margin-bottom-8" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: red;</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-max(tablet)</span> {</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: green;</p>
+							<p class="margin-bottom-8" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-max(phone-xlg)</span> {</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: blue;</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p style="font-size: 14px;">}</p>
+						</div>
+						<div class="col-xl-6">
+							<p><strong>Mobile first</strong></p>
+							<p>Min-width, the given screen size or larger.</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">.custom-class {</p>
+							<p class="margin-bottom-8" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: blue;</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-min(phone-xlg)</span> {</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: green;</p>
+							<p class="margin-bottom-8" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@include <span style="color: crimson;">breakpoint-min(tablet)</span> {</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: red;</p>
+							<p class="margin-bottom-0" style="font-size: 14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p style="font-size: 14px;">}</p>
 						</div>
 					</div>
 				</div>
@@ -368,47 +386,47 @@
    Resize the browser to see responsive breakpoints in action.
 &lt;/div&gt;
 
-<span style="color: orangered">Custom SCSS using responsive breakpoint mixins</span>
+<span style="color: orangered">Custom desktop first SCSS using responsive breakpoint mixins</span>
 
 .responsive-breakpoints {
    background: white;
 
-   @include <span style="color: crimson;">breakpoint-desktop-lg</span> {
+   @include <span style="color: crimson;">breakpoint-max(desktop-lg)</span> {
       background: cornsilk;
    }
 
-   @include <span style="color: crimson;">breakpoint-desktop-medium</span> {
+   @include <span style="color: crimson;">breakpoint-max(desktop-md)</span> {
       background: lightcyan;
    }
   
-   @include <span style="color: crimson;">breakpoint-desktop-small</span> {
+   @include <span style="color: crimson;">breakpoint-max(desktop-sm)</span> {
       background: mistyrose;
    }
 
-   @include <span style="color: crimson;">breakpoint-tablet</span> {
+   @include <span style="color: crimson;">breakpoint-max(tablet)</span> {
       background: seashell;
    }
 
-   @include <span style="color: crimson;">breakpoint-phone-xlg</span> {
+   @include <span style="color: crimson;">breakpoint-max(phone-xlg)</span> {
       background: lightgreen;
    }
 
-   @include <span style="color: crimson;">breakpoint-phone-lg</span> {
+   @include <span style="color: crimson;">breakpoint-max(phone-lg)</span> {
       background: powderblue;
    }
 
-   @include <span style="color: crimson;">breakpoint-phone-md</span> {
+   @include <span style="color: crimson;">breakpoint-max(phone-md)</span> {
       background: honeydew;
    }
 
-   @include <span style="color: crimson;">breakpoint-phone-sm</span> {
+   @include <span style="color: crimson;">breakpoint-max(phone-sm)</span> {
       background: paleturquoise;
    }
 }</pre>
 					</div>
 					<p><strong>Result</strong></p>
 					<div class="highlight mint">
-						<div class="padding-top-bottom-60 padding-left-right-60 border text-center" id="custom-class">
+						<div class="padding-top-bottom-30 padding-left-right-60 border text-center" id="custom-class">
 							<p>Resize the browser to see responsive breakpoints in action.</p>
 						</div>
 						<style>
@@ -416,70 +434,59 @@
 								background: white;
 							}
 							@media (max-width: 1439px) {
-								[id=custom-class] {
-									background: cornsilk;
-								}
+								[id=custom-class] { background: cornsilk; }
 							}
 							@media (max-width: 1365px) {
-								[id=custom-class] {
-									background: lightcyan;
-								}
+								[id=custom-class] { background: lightcyan; }
 							}
 							@media (max-width: 1199px) {
-								[id=custom-class] {
-									background: mistyrose;
-								}
+								[id=custom-class] { background: mistyrose; }
 							}
 							@media (max-width: 991px) {
-								[id=custom-class] {
-									background: seashell;
-								}
+								[id=custom-class] { background: seashell; }
 							}
 							@media (max-width: 767px) {
-								[id=custom-class] {
-									background: lightgreen;
-								}
+								[id=custom-class] { background: lightgreen; }
 							}
 							@media (max-width: 599px) {
-								[id=custom-class] {
-									background: powderblue;
-								}
+								[id=custom-class] { background: powderblue; }
 							}
 							@media (max-width: 479px) {
-								[id=custom-class] {
-									background: honeydew;
-								}
+								[id=custom-class] { background: honeydew; }
 							}
 							@media (max-width: 419px) {
-								[id=custom-class] {
-									background: paleturquoise;
-								}
+								[id=custom-class] { background: paleturquoise; }
 							}
 						</style>
 					</div>
 
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported naming patterns:</strong></p>
-
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-6 padding-bottom-30">
+							<p>Max width, the given screen size or smaller.</p>
 							<p>
-								<span class="blue">breakpoint-desktop-lg</span><br />
-								<span class="blue">breakpoint-desktop-md</span><br />
-								<span class="blue">breakpoint-desktop-sm</span><br />
+								<span class="blue">breakpoint-max(desktop-lg)</span><br />
+								<span class="blue">breakpoint-max(desktop-md)</span><br />
+								<span class="blue">breakpoint-max(desktop-sm)</span><br /><br />
+								<span class="blue">breakpoint-max(tablet)</span><br /><br />
+								<span class="blue">breakpoint-max(phone-xlg)</span><br />
+								<span class="blue">breakpoint-max(phone-lg)</span><br />
+								<span class="blue">breakpoint-max(phone-md)</span><br />
+								<span class="blue">breakpoint-max(phone-sm)</span><br />
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-6 padding-bottom-30">
+							<p>Min width, the given screen size or larger.</p>
 							<p>
-								<span class="blue">breakpoint-tablet</span><br />
-							</p>
-						</div>
-						<div class="col">
-							<p>
-								<span class="blue">breakpoint-phone-xlg</span><br />
-								<span class="blue">breakpoint-phone-lg</span><br />
-								<span class="blue">breakpoint-phone-md</span><br />
-								<span class="blue">breakpoint-phone-sm</span><br />
+								<span class="blue">breakpoint-min(desktop-lg)</span><br />
+								<span class="blue">breakpoint-min(desktop-md)</span><br />
+								<span class="blue">breakpoint-min(desktop-sm)</span><br /><br />
+								<span class="blue">breakpoint-min(tablet)</span><br /><br />
+								<span class="blue">breakpoint-min(phone-xlg)</span><br />
+								<span class="blue">breakpoint-min(phone-lg)</span><br />
+								<span class="blue">breakpoint-min(phone-md)</span><br />
+								<span class="blue">breakpoint-min(phone-sm)</span><br />
 							</p>
 						</div>
 					</div>
@@ -576,19 +583,19 @@
 					<p><strong>Supported class name patterns:</strong></p>
 
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">font-size-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-font-size-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-font-size-</span><span class="gray">[value]</span>
@@ -645,7 +652,7 @@
 					<p><strong>Supported naming patterns:</strong></p>
 
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">margin-</span><span class="gray">[value]</span><br />
@@ -657,7 +664,7 @@
 								<span class="blue">margin-left-right-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-margin-</span><span class="gray">[value]</span><br />
@@ -669,7 +676,7 @@
 								<span class="blue">tablet-margin-left-right-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-margin-</span><span class="gray">[value]</span><br />
@@ -732,7 +739,7 @@
 					<p><strong>Supported naming patterns:</strong></p>
 
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">padding-</span><span class="gray">[value]</span><br />
@@ -744,7 +751,7 @@
 								<span class="blue">padding-left-right-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-padding-</span><span class="gray">[value]</span><br />
@@ -756,7 +763,7 @@
 								<span class="blue">tablet-padding-left-right-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-padding-</span><span class="gray">[value]</span><br />
@@ -797,7 +804,7 @@
 
 					
 					<div class="row margin-top-30">
-						<div class="col-lg-6">
+						<div class="col-lg-6 padding-bottom-30">
 							<p><strong>Supported table class names:</strong></p>
 							<p>
 								<span class="blue">table</span><br />
@@ -806,7 +813,7 @@
 								<span class="blue">table-centered</span><br />
 							</p>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-6 padding-bottom-30">
 							<p><strong>Supported breakpoint names:</strong></p>
 							<p>
 								<span class="blue">$breakpoint-desktop-large</span><br />
@@ -1334,19 +1341,19 @@
 					<p><strong>Supported class name patterns:</strong></p>
 
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">z-index-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-z-index-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-z-index-</span><span class="gray">[value]</span>
@@ -1402,19 +1409,19 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">border-radius-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-border-radius-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-border-radius-</span><span class="gray">[value]</span>
@@ -1479,7 +1486,7 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">border</span><br />
@@ -1490,7 +1497,7 @@
 								<span class="blue">border-radius-circle</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-border</span><br />
@@ -1501,7 +1508,7 @@
 								<span class="blue">tablet-border-radius-circle</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-border</span><br />
@@ -1559,7 +1566,7 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">center-vert</span><br />
@@ -1567,7 +1574,7 @@
 								<span class="blue">center-both</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-center-vert</span><br />
@@ -1575,7 +1582,7 @@
 								<span class="blue">tablet-center-both</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-center-vert</span><br />
@@ -1635,7 +1642,7 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">overflow-hidden</span><br />
@@ -1649,7 +1656,7 @@
 								<span class="blue">overflow-vertical-scroll</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-overflow-hidden</span><br />
@@ -1663,7 +1670,7 @@
 								<span class="blue">tablet-overflow-vertical-scroll</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-overflow-hidden</span><br />
@@ -1685,56 +1692,799 @@
 
 	<div class="padding-bottom-60"></div>
 
-	<!-- flex order -->
-	<section class="padding-top-bottom-30" id="flex-order">
+	<!-- display -->
+	<section class="padding-top-bottom-30" id="display">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<h4 class="margin-bottom-25" style="color: crimson;">Flex Order <span style="color: silver;">(Utilities)</span></h4>
+					<h4 class="margin-bottom-25" style="color: crimson;">Display <span style="color: silver;">(Utilities)</span></h4>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xl-7">
-					<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items" target="_blank">Flex Order</a> utility classes allow elements within a flexed parent div block container to have their layout order changed without affecting source order. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+					<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">Display</a> utility classes will determine if an element is treated as a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout" target="_blank">block or inline</a> level element. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-xl-5">
 					<hr class="margin-top-bottom-30">
 					<p><strong>Pro Tip</strong></p>
-					<p>Flex Order also applies to elements that are stacked vertically. For example, a card component with an image stacked on top of the body and text can be re-ordered beneath the body and text when a responsive breakpoint width is reached by using the <span class="blue">tablet-order-</span><span class="gray">[value]</span> class.</p>
+					<p>When using JavaScript with elements that are set to <span class="blue">display: none</span>, avoid the Tailspin display utility classes as they may override the intended JavaScript code.</p>
 				</div>
 				<div class="col-xl-7">
 					<hr class="margin-top-bottom-30">
-					<p class="margin-bottom-30">The following example adds a flex order of 4 to the first div block, which forces the element to the end of the layout reading left to right.</p>
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" target="_blank">Display</a> property of the &lt;div&gt; blocks. Since a &lt;div&gt; is, by default, a block level element, the desktop breakpoint class is not needed. Resize the browser to see the display utility classes in action.</p>
 
 					<p><strong>Code</strong></p>
 					<div class="highlight">
-<pre>&lt;div class="<span style="color: crimson;">order-4</span>"&gt;
+<pre>&lt;div class="<span style="color: crimson;">tablet-display-inline</span>"&gt;
    Div Block 1
 &lt;/div&gt;
 
-&lt;div class="<span style="color: crimson;">order-2</span>"&gt;
+&lt;div class="<span style="color: crimson;">tablet-display-inline</span>"&gt;
    Div Block 2
 &lt;/div&gt;
 
-&lt;div class="<span style="color: crimson;">order-3</span>"&gt;
+&lt;div class="<span style="color: crimson;">tablet-display-inline phone-display-none</span>"&gt;
    Div Block 3
 &lt;/div&gt;</pre>
 					</div>
 
 					<p><strong>Result</strong></p>
 					<div class="highlight mint">
-						 <div style="display: flex; padding: 1.5rem; background: white; border: 1px solid gainsboro;">
-							
-							<div class="margin-right-20 padding-20 border order-4">
+						 <div style="min-height: 102px; background: white; overflow: hidden;" class="padding-left-right-20 padding-bottom-20 tablet-padding-20 border">
+							<div class="tablet-inline margin-bottom-20 tablet-margin-bottom-0 tablet-margin-right-20 padding-20 border" style="position: relative; top: 20px;">
 								Div Block 1
 							</div>
-							<div class="margin-right-20 padding-20 border order-2">
+							<div class="tablet-display-inline margin-bottom-20 tablet-margin-bottom-0 tablet-margin-right-20 padding-20 border" style="position: relative; top: 20px;">
 								Div Block 2
 							</div>
-							<div class="margin-right-20 padding-20 border order-3">
+							<div class="tablet-display-inline phone-display-none margin-bottom-20 padding-20 border" style="position: relative; top: 20px;">
 								Div Block 3
+							</div>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">display-block</span><br />
+								<span class="blue">display-block-inline</span><br />
+								<span class="blue">display-inline</span><br />
+								<span class="blue">display-none</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-display-block</span><br />
+								<span class="blue">tablet-display-block-inline</span><br />
+								<span class="blue">tablet-display-inline</span><br />
+								<span class="blue">tablet-display-none</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-display-block</span><br />
+								<span class="blue">phone-display-block-inline</span><br />
+								<span class="blue">phone-display-inline</span><br />
+								<span class="blue">phone-display-none</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="padding-bottom-60"></div>
+
+	<!-- flex properties -->
+	<section class="padding-top-bottom-30" id="flex-properties">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<h4 class="margin-bottom-25" style="color: crimson;">Flex Properties <span style="color: silver;">(Utilities)</span></h4>
+				</div>
+			</div>
+
+			<!-- flex -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Flex</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flex</a> utility classes define a flex container's display property. Commonly referred as <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flexbox</a>, these classes enable alignment of items on the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis" target="_blank">main-axis</a> or <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis" target="_blank">cross-axis</a> of a container. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip</strong></p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flexbox</a> is a one-dimensional layout method and flex items can be allowed to wrap but, once they do, each line becomes a flex container of its own. When space is distributed flexbox does not look at the placement of items in other rows and tries to line things up with each other.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flex</a> property of the &lt;div&gt; blocks container. Resize the browser to see the flex utility classes in action.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">display-flex-inline tablet-display-flex phone-display-flex-inline</span>"&gt;
+   &lt;div&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 3
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="background: white;" class="display-flex-inline tablet-display-flex phone-display-flex-inline padding-20 border">
+							<div class="margin-right-20 padding-20 border">
+								Div Block 1
+							</div>
+							<div class="margin-right-20 padding-20 border">
+								Div Block 2
+							</div>
+							<div class="padding-20 border">
+								Div Block 3
+							</div>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">display-flex</span><br />
+								<span class="blue">display-flex-inline</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-display-flex</span><br />
+								<span class="blue">tablet-display-flex-inline</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-display-flex</span><br />
+								<span class="blue">phone-display-flex-inline</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<!-- flex direction -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Flex Direction</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Direction</a> utility classes will set how flex items are placed in a flex container defining the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis" target="_blank">main-axis</a> and the direction, either normal or reversed. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip</strong></p>
+					<p>Combine <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Direction</a> with JavaScript to create a simple sorting mechanism.</p>
+					<p><strong>Example</strong></p>
+
+					<div class="display-flex padding-top-20 padding-bottom-10">
+						<a href="#" class="js-example-sort-asc margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: whitesmoke; text-decoration: none;">Ascending</a>
+						<a href="#" class="js-example-sort-dsc padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Descending</a>
+					</div>
+					<div class="display-flex flex-column padding-20 border js-example-sort-target">
+						<p class="margin-top-bottom-5 font-size-14">Item 1</p>
+						<p class="margin-top-bottom-5 font-size-14">Item 2</p>
+						<p class="margin-top-bottom-5 font-size-14">Item 3</p>
+						<p class="margin-top-bottom-5 font-size-14">Item 4</p>
+						<p class="margin-top-bottom-5 font-size-14">Item 5</p>
+					</div>
+					<p class="margin-top-20 blue">flex-column</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Direction</a> property of the &lt;div&gt; blocks container. Resize the browser to see the flex direction utility classes in action.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">flex-row tablet-flex-column phone-flex-row-reverse</span>"&gt;
+   &lt;div&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 3
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="background: white;" class="display-flex flex-row tablet-flex-column phone-flex-row-reverse phone-justify-content-start padding-20 border">
+							<div class="margin-right-20 tablet-margin-0 tablet-margin-bottom-20 phone-margin-0 padding-20 border">
+								Div Block 1
+							</div>
+							<div class="margin-right-20 tablet-margin-0 tablet-margin-bottom-20 phone-margin-0 phone-margin-right-20 padding-20 border">
+								Div Block 2
+							</div>
+							<div class="phone-margin-right-20 padding-20 border">
+								Div Block 3
+							</div>
+						 </div>
+					</div>
+					
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">flex-row</span><br />
+								<span class="blue">flex-row-reverse</span><br />
+								<span class="blue">flex-column</span><br />
+								<span class="blue">flex-column-reverse</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-flex-row</span><br />
+								<span class="blue">tablet-flex-row-reverse</span><br />
+								<span class="blue">tablet-flex-column</span><br />
+								<span class="blue">tablet-flex-column-reverse</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-flex-row</span><br />
+								<span class="blue">phone-flex-row-reverse</span><br />
+								<span class="blue">phone-flex-column</span><br />
+								<span class="blue">phone-flex-column-reverse</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<!-- flex wrap -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Flex Wrap</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Wrap</a> utility classes set whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip</strong></p>
+					<p>Use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Wrap</a> on a container to quickly allow or prevent child elements, that may not fit into a single row, to cascade freely when the parent container is resized.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap" target="_blank">Flex Wrap</a> property of the &lt;div&gt; blocks container. Setting the tablet responsive breakpoint to <span class="blue">tablet-flex-no-wrap</span> demonstrates how this will break the layout if flex wrapping is disabled. Resize the browser to see the flex wrap utility classes in action.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight overflow">
+<pre>&lt;div class="<span style="color: crimson;">flex-wrap-reverse tablet-flex-no-wrap phone-flex-wrap</span>"&gt;
+   &lt;div&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 3
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 4
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 5
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 6
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 7
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 8
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 9
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="background: white;" class="display-flex flex-wrap-reverse tablet-flex-no-wrap phone-flex-wrap padding-10 border">
+							<div class="margin-10 padding-20 border">
+								Div Block 1
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 2
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 3
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 4
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 5
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 6
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 7
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 8
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 9
+							</div>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">flex-wrap</span><br />
+								<span class="blue">flex-wrap-reverse</span><br />
+								<span class="blue">flex-no-wrap</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-flex-wrap</span><br />
+								<span class="blue">tablet-flex-wrap-reverse</span><br />
+								<span class="blue">tablet-flex-no-wrap</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-flex-wrap</span><br />
+								<span class="blue">phone-flex-wrap-reverse</span><br />
+								<span class="blue">phone-flex-no-wrap</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<!-- justify content -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Justify Content</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank">Justify Content</a> utility classes define how the browser distributes space between and around content items along the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis" target="_blank">main-axis</a> of a flex container. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Examples</strong></p>
+
+					<div class="display-flex padding-top-20 padding-bottom-10">
+						<a href="#" class="js-example-jc-a margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: whitesmoke; text-decoration: none;">Start</a>
+						<a href="#" class="js-example-jc-b margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">End</a>
+						<a href="#" class="js-example-jc-c margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Center</a>
+						<a href="#" class="js-example-jc-d margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Space Between</a>
+						<a href="#" class="js-example-jc-e margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Space Around</a>
+						<a href="#" class="js-example-jc-f padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Space Evenly</a>
+					</div>
+					<div class="display-flex justify-content-start padding-10 border js-example-jc-target">
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">1</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">2</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">3</div>
+					</div>
+					<p class="margin-top-15 blue">justify-content-start</p>
+
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content" target="_blank">Justify Content</a> property of the &lt;div&gt; blocks container. Resize the browser to see the justify content utility classes in action.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">justify-content-between tablet-justify-content-center</span>"&gt;
+   &lt;div&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 3
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="background: white;" class="display-flex justify-content-between tablet-justify-content-center padding-10 border">
+							<div class="margin-10 padding-20 border">
+								Div Block 1
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 2
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 3
+							</div>
+						 </div>
+					</div>
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">justify-content-start</span><br />
+								<span class="blue">justify-content-end</span><br />
+								<span class="blue">justify-content-center</span><br />
+								<span class="blue">justify-content-space-between</span><br />
+								<span class="blue">justify-content-space-around</span><br />
+								<span class="blue">justify-content-space-evenly</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-justify-content-start</span><br />
+								<span class="blue">tablet-justify-content-end</span><br />
+								<span class="blue">tablet-justify-content-center</span><br />
+								<span class="blue">tablet-justify-content-space-between</span><br />
+								<span class="blue">tablet-justify-content-space-around</span><br />
+								<span class="blue">tablet-justify-content-space-evenly</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-justify-content-start</span><br />
+								<span class="blue">phone-justify-content-end</span><br />
+								<span class="blue">phone-justify-content-center</span><br />
+								<span class="blue">phone-justify-content-space-between</span><br />
+								<span class="blue">phone-justify-content-space-around</span><br />
+								<span class="blue">phone-justify-content-space-evenly</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+			
+			<!-- align items -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Align Items</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">Align Items</a> utility classes sets the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">Align Self</a> value on all direct children as a group, and controls the alignment of items on flexbox's <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis" target="_blank">cross-axis</a>. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Examples</strong></p>
+					<div class="display-flex padding-top-20 padding-bottom-10">
+						<a href="#" class="js-example-ai-a margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: whitesmoke; text-decoration: none;">Start</a>
+						<a href="#" class="js-example-ai-b margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">End</a>
+						<a href="#" class="js-example-ai-c margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Center</a>
+						<a href="#" class="js-example-ai-d margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Baseline</a>
+						<a href="#" class="js-example-ai-e margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Stretch</a>
+					</div>
+					<div style="height: 200px;" class="display-flex align-items-start padding-10 border js-example-ai-target">
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">1</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">2</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14" style="border-color: silver !important;">3</div>
+					</div>
+					<p class="margin-top-15 blue">align-items-start</p>
+
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">Align Items</a> property of the &lt;div&gt; blocks container. Resize the browser to see the justify content utility classes in action.</p>
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">justify-content-between tablet-justify-content-center</span>"&gt;
+   &lt;div&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div&gt;
+      Div Block 3
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="height: 200px; background: white;" class="display-flex align-items-center tablet-align-items-stretch padding-10 border">
+							<div class="margin-10 padding-20 border">
+								Div Block 1
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 2
+							</div>
+							<div class="margin-10 padding-20 border">
+								Div Block 3
+							</div>
+						 </div>
+					</div>
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">align-items-start</span><br />
+								<span class="blue">align-items-end</span><br />
+								<span class="blue">align-items-center</span><br />
+								<span class="blue">align-items-baseline</span><br />
+								<span class="blue">align-items-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-align-items-start</span><br />
+								<span class="blue">tablet-align-items-end</span><br />
+								<span class="blue">tablet-align-items-center</span><br />
+								<span class="blue">tablet-align-items-baseline</span><br />
+								<span class="blue">tablet-align-items-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-align-items-start</span><br />
+								<span class="blue">phone-align-items-end</span><br />
+								<span class="blue">phone-align-items-center</span><br />
+								<span class="blue">phone-align-items-baseline</span><br />
+								<span class="blue">phone-align-items-stretch</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<!-- align self -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-25"><strong>Align Self</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">Align Self</a> utility classes will override any flex item's <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-items" target="_blank">Align Items</a> value, and will align an item on flexbox's <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis" target="_blank">cross-axis</a>. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">align-self-start</span><br />
+								<span class="blue">align-self-end</span><br />
+								<span class="blue">align-self-center</span><br />
+								<span class="blue">align-self-baseline</span><br />
+								<span class="blue">align-self-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-align-self-start</span><br />
+								<span class="blue">tablet-align-self-end</span><br />
+								<span class="blue">tablet-align-self-center</span><br />
+								<span class="blue">tablet-align-self-baseline</span><br />
+								<span class="blue">tablet-align-self-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-align-self-start</span><br />
+								<span class="blue">phone-align-self-end</span><br />
+								<span class="blue">phone-align-self-center</span><br />
+								<span class="blue">phone-align-self-baseline</span><br />
+								<span class="blue">phone-align-self-stretch</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+
+			<!-- align content -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-15"><strong>Align Content</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items" target="_blank">Align Content</a> utility classes will property set the distribution of space between and around content items along a flexbox's <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis" target="_blank">cross-axis</a>. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+
+					<hr class="margin-top-bottom-30">
+					<p><strong>Supported class name patterns:</strong></p>
+					<div class="row margin-top-20">
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Desktop to phone</p>
+							<p>
+								<span class="blue">align-content-start</span><br />
+								<span class="blue">align-content-end</span><br />
+								<span class="blue">align-content-center</span><br />
+								<span class="blue">align-content-space-between</span><br />
+								<span class="blue">align-content-space-around</span><br />
+								<span class="blue">align-content-space-evenly</span><br />
+								<span class="blue">align-content-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Tablet to phone</p>
+							<p>
+								<span class="blue">tablet-align-content-start</span><br />
+								<span class="blue">tablet-align-content-end</span><br />
+								<span class="blue">tablet-align-content-center</span><br />
+								<span class="blue">tablet-align-content-space-between</span><br />
+								<span class="blue">tablet-align-content-space-around</span><br />
+								<span class="blue">tablet-align-content-space-evenly</span><br />
+								<span class="blue">tablet-align-content-stretch</span><br />
+							</p>
+						</div>
+						<div class="col-xl-4 padding-bottom-30">
+							<p>Phone</p>
+							<p>
+								<span class="blue">phone-align-content-start</span><br />
+								<span class="blue">phone-align-content-end</span><br />
+								<span class="blue">phone-align-content-center</span><br />
+								<span class="blue">phone-align-content-space-between</span><br />
+								<span class="blue">phone-align-content-space-around</span><br />
+								<span class="blue">phone-align-content-space-evenly</span><br />
+								<span class="blue">phone-align-content-stretch</span><br />
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="padding-bottom-60"></div>
+			
+			<!-- order -->
+			<div class="row">
+				<div class="col">
+					<h5 class="margin-bottom-15"><strong>Flex Order</strong></h5>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-7">
+					<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items" target="_blank">Flex Order</a> utility classes allow flex items within a container to have their layout order changed without affecting source order. The classes also support responsive breakpoints for tablet and phone viewport widths.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xl-5">
+					<hr class="margin-top-bottom-30">
+					<p><strong>Pro Tip</strong></p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox#ordering_flex_items" target="_blank">Flex Order</a> also applies to elements that are stacked vertically. For example, a card component with an image stacked on top of the body and text, can be re-ordered beneath the body and text at a responsive breakpoint.</p>
+				</div>
+				<div class="col-xl-7">
+					<hr class="margin-top-bottom-30">
+					<p class="margin-bottom-30">The following example displays a flex order of 4 on the first &lt;div&gt; block, which forces the element to the end of the layout reading left to right.</p>
+
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div class="<span style="color: crimson;">order-4</span>"&gt;
+   Div Block 3
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">order-2</span>"&gt;
+   Div Block 1
+&lt;/div&gt;
+
+&lt;div class="<span style="color: crimson;">order-3</span>"&gt;
+   Div Block 2
+&lt;/div&gt;</pre>
+					</div>
+
+					<p><strong>Result</strong></p>
+					<div class="highlight mint">
+						 <div style="background: white;" class="display-flex padding-20 border">
+							
+							<div class="margin-right-20 padding-20 border order-4">
+								Div Block 3
+							</div>
+							<div class="margin-right-20 padding-20 border order-2">
+								Div Block 1
+							</div>
+							<div class="margin-right-20 padding-20 border order-3">
+								Div Block 2
 							</div>
 
 						 </div>
@@ -1743,19 +2493,19 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">order-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-order-</span><span class="gray">[value]</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-order-</span><span class="gray">[value]</span>
@@ -1828,7 +2578,7 @@
 				   	<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">ratio-21x9</span><br />
@@ -1837,7 +2587,7 @@
 								<span class="blue">ratio-1x1</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Tablet to phone</p>
 							<p>
 								<span class="blue">tablet-ratio-21x9</span><br />
@@ -1846,7 +2596,7 @@
 								<span class="blue">tablet-ratio-1x1</span>
 							</p>
 						</div>
-						<div class="col">
+						<div class="col-xl-4 padding-bottom-30">
 							<p>Phone</p>
 							<p>
 								<span class="blue">phone-ratio-21x9</span><br />
@@ -1909,7 +2659,7 @@
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
-						<div class="col">
+						<div class="col padding-bottom-30">
 							<p>Desktop to phone</p>
 							<p>
 								<span class="blue">desktop-only</span><br />
@@ -2709,7 +3459,8 @@
 	<li><a href="#border-color">Borders, Default Border Color, & Circles (Utilities)</a></li>
 	<li><a href="#centering">Centering (Utilities)</a></li>
 	<li><a href="#clipping">Clipping (Utilities)</a></li>
-	<li><a href="#flex-order">Flex Order (Utilities)</a></li>
+	<li><a href="#display">Display (Utilities)</a></li>
+	<li><a href="#flex-properties">Flex Properties (Utilities)</a></li>
 	<li><a href="#ratios">Ratios (Utilities)</a></li>
 	<li><a href="#responsive-helpers">Responsive (Helpers)</a></li>
 	<li><a href="#media-fill">Media File to Container</a></li>
@@ -2723,6 +3474,209 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="dev/dist/dev/js/fill.media.to.container.js"></script>
 <script type="text/javascript">
+
+	// Sort example
+	let asc = $(".js-example-sort-asc"),
+		dsc = $(".js-example-sort-dsc");
+	function sortAsc(e) {
+		e.preventDefault();
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(dsc).css({
+			'background' : 'white',
+		});
+		$(".js-example-sort-target").removeClass('flex-column-reverse').addClass('flex-column');
+		$(".js-example-sort-target + p").hide();
+		$(".js-example-sort-target + p").text('flex-column').delay(200).fadeIn();
+	}
+	function sortDsc(e) {
+		e.preventDefault();
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(asc).css({
+			'background' : 'white',
+		});
+		$(".js-example-sort-target").removeClass('flex-column').addClass('flex-column-reverse');
+		$(".js-example-sort-target + p").hide();
+		$(".js-example-sort-target + p").text('flex-column-reverse').delay(200).fadeIn();
+	}
+	$(asc).on('click', sortAsc);
+	$(dsc).on('click', sortDsc);
+
+	// Justify content example
+	let jcA = $(".js-example-jc-a"),
+		jcB = $(".js-example-jc-b"),
+		jcC = $(".js-example-jc-c"),
+		jcD = $(".js-example-jc-d"),
+		jcE = $(".js-example-jc-e"),
+		jcF = $(".js-example-jc-f"),
+		jcTarget = $(".js-example-jc-target"),
+		jcName = $(".js-example-jc-target + p");
+	function jcTargetA(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-end justify-content-center justify-content-space-between justify-content-space-around justify-content-space-evenly');
+		$(jcTarget).addClass('justify-content-start');
+		$(jcName).hide();
+		$(jcName).text('justify-content-start').delay(200).fadeIn();
+	}
+	function jcTargetB(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-start justify-content-center justify-content-space-between justify-content-space-around justify-content-space-evenly');
+		$(jcTarget).addClass('justify-content-end');
+		$(jcName).hide();
+		$(jcName).text('justify-content-end').delay(200).fadeIn();
+	}
+	function jcTargetC(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-start justify-content-end justify-content-space-between justify-content-space-around justify-content-space-evenly');
+		$(jcTarget).addClass('justify-content-center');
+		$(jcName).hide();
+		$(jcName).text('justify-content-center').delay(200).fadeIn();
+	}
+	function jcTargetD(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-start justify-content-end justify-content-center justify-content-space-around justify-content-space-evenly');
+		$(jcTarget).addClass('justify-content-space-between');
+		$(jcName).hide();
+		$(jcName).text('justify-content-space-between').delay(200).fadeIn();
+	}
+	function jcTargetE(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-start justify-content-end justify-content-center justify-content-space-between justify-content-space-evenly');
+		$(jcTarget).addClass('justify-content-space-around');
+		$(jcName).hide();
+		$(jcName).text('justify-content-space-around').delay(200).fadeIn();
+	}
+	function jcTargetF(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(jcTarget).removeClass('justify-content-start justify-content-end justify-content-center justify-content-space-between justify-content-space-around');
+		$(jcTarget).addClass('justify-content-space-evenly');
+		$(jcName).hide();
+		$(jcName).text('justify-content-space-evenly').delay(200).fadeIn();
+	}
+	$(jcA).on('click', jcTargetA);
+	$(jcB).on('click', jcTargetB);
+	$(jcC).on('click', jcTargetC);
+	$(jcD).on('click', jcTargetD);
+	$(jcE).on('click', jcTargetE);
+	$(jcF).on('click', jcTargetF);
+
+	// Align items example
+	let aiA = $(".js-example-ai-a"),
+		aiB = $(".js-example-ai-b"),
+		aiC = $(".js-example-ai-c"),
+		aiD = $(".js-example-ai-d"),
+		aiE = $(".js-example-ai-e"),
+		aiTarget = $(".js-example-ai-target"),
+		aiName = $(".js-example-ai-target + p");
+	function aiTargetA(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(aiTarget).removeClass('align-items-end align-items-center align-items-baseline align-items-stretch');
+		$(aiTarget).addClass('align-items-start');
+		$(aiName).hide();
+		$(aiName).text('align-items-start').delay(200).fadeIn();
+	}
+	function aiTargetB(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(aiTarget).removeClass('align-items-start align-items-center align-items-baseline align-items-stretch');
+		$(aiTarget).addClass('align-items-end');
+		$(aiName).hide();
+		$(aiName).text('align-items-end').delay(200).fadeIn();
+	}
+	function aiTargetC(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(aiTarget).removeClass('align-items-start align-items-end align-items-baseline align-items-stretch');
+		$(aiTarget).addClass('align-items-center');
+		$(aiName).hide();
+		$(aiName).text('align-items-center').delay(200).fadeIn();
+	}
+	function aiTargetD(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(aiTarget).removeClass('align-items-start align-items-end align-items-center align-items-stretch');
+		$(aiTarget).addClass('align-items-baseline');
+		$(aiName).hide();
+		$(aiName).text('align-items-baseline').delay(200).fadeIn();
+	}
+	function aiTargetE(e) {
+		e.preventDefault();
+		$(this).parent().find('a').css({
+			'background' : 'white',
+		});
+		$(this).css({
+			'background' : 'whitesmoke',
+		});
+		$(aiTarget).removeClass('align-items-start align-items-end align-items-center align-items-baseline');
+		$(aiTarget).addClass('align-items-stretch');
+		$(aiName).hide();
+		$(aiName).text('align-items-stretch').delay(200).fadeIn();
+	}
+	$(aiA).on('click', aiTargetA);
+	$(aiB).on('click', aiTargetB);
+	$(aiC).on('click', aiTargetC);
+	$(aiD).on('click', aiTargetD);
+	$(aiE).on('click', aiTargetE);
 
 	// Shake animation
 	function boxShake(e) {

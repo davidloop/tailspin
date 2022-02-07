@@ -11,7 +11,7 @@ $i : 0;
 
 $h : 0;
 @while $h <= 1 {
-    @include breakpoint-tablet {
+    @include breakpoint-max(tablet) {
         :global .tablet-opacity-#{round($h * 100)} {
             opacity: $h;
         }
@@ -21,7 +21,7 @@ $h : 0;
 
 $j : 0;
 @while $j <= 1 {
-    @include breakpoint-phone-xlg {
+    @include breakpoint-max(phone-xlg) {
         :global .phone-opacity-#{round($j * 100)} {
             opacity: $j;
         }

@@ -13,7 +13,7 @@
   @include center-both;
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
   :global .tablet-center-vert {
     @include center-vert;
   }
@@ -27,7 +27,7 @@
   }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
   :global .phone-center-vert {
     @include center-vert;
   }
@@ -80,7 +80,7 @@
   overflow-y: scroll !important;
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
   :global .tablet-overflow-hidden {
     overflow: hidden !important;
   }
@@ -118,7 +118,7 @@
   }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
   :global .phone-overflow-hidden {
     overflow: hidden !important;
   }
@@ -188,7 +188,7 @@
   border-color: $default-border-color !important;
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
   :global .tablet-border {
     border-style: solid !important;
     border-width: 1px !important;
@@ -215,7 +215,7 @@
   }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
   :global .phone-border {
     border-style: solid !important;
     border-width: 1px !important;
@@ -249,15 +249,461 @@
   border-radius: 50% !important;
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
   :global .tablet-border-radius-circle {
     border-radius: 50% !important;
   }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
   :global .phone-border-radius-circle {
     border-radius: 50% !important;
+  }
+}
+
+
+// Display
+// **************************************
+:global .display-block {
+  display: block !important;
+}
+
+:global .display-block-inline {
+  display: inline-block !important;
+}
+
+:global .display-inline {
+  display: inline !important;
+}
+
+:global .display-none {
+  display: none !important;
+}
+
+@include breakpoint-max(tablet) {
+  :global .tablet-display-block {
+    display: block !important;
+  }
+
+  :global .tablet-display-block-inline {
+    display: inline-block !important;
+  }
+  
+  :global .tablet-display-inline {
+    display: inline !important;
+  }
+
+  :global .tablet-display-none {
+    display: none !important;
+  }
+}
+
+@include breakpoint-max(phone-xlg) {
+  :global .phone-display-block {
+    display: block !important;
+  }
+
+  :global .phone-display-block-inline {
+    display: inline-block !important;
+  }
+  
+  :global .phone-display-inline {
+    display: inline !important;
+  }
+
+  :global .phone-display-none {
+    display: none !important;
+  }
+}
+
+
+// Flex
+// **************************************
+:global .display-flex {
+  @include flex;
+}
+
+:global .display-flex-inline {
+  @include flex-inline;
+}
+
+:global .flex-row {
+  @include flex-row;
+}
+
+:global .flex-row-reverse {
+  @include flex-row-reverse;
+}
+
+:global .flex-column {
+  @include flex-column;
+}
+
+:global .flex-column-reverse {
+  @include flex-column-reverse;
+}
+
+:global .justify-content-center {
+  @include justify-content(center);
+}
+
+:global .justify-content-space-between {
+  @include justify-content(space-between);
+}
+
+:global .justify-content-space-around {
+  @include justify-content(space-around);
+}
+
+:global .justify-content-space-evenly {
+  @include justify-content(space-evenly);
+}
+
+:global .justify-content-start {
+  @include justify-content(start);
+}
+
+:global .justify-content-end {
+  @include justify-content(end);
+}
+
+:global .align-items-start {
+  @include align-items(start);
+}
+
+:global .align-items-end {
+  @include align-items(end);
+}
+
+:global .align-items-center {
+  @include align-items(center);
+}
+
+:global .align-items-baseline {
+  @include align-items(baseline);
+}
+
+:global .align-items-stretch {
+  @include align-items(stretch);
+}
+
+:global .align-self-start {
+  @include align-self(start);
+}
+
+:global .align-self-end {
+  @include align-self(end);
+}
+
+:global .align-self-center {
+  @include align-self(center);
+}
+
+:global .align-self-baseline {
+  @include align-self(baseline);
+}
+
+:global .align-self-stretch {
+  @include align-self(stretch);
+}
+
+:global .align-content-start {
+  @include align-content(start);
+}
+
+:global .align-content-end {
+  @include align-content(end);
+}
+
+:global .align-content-center {
+  @include align-content(center);
+}
+
+:global .align-content-space-between {
+  @include align-content(space-between);
+}
+
+:global .align-content-space-around {
+  @include align-content(space-around);
+}
+
+:global .align-content-space-evenly {
+  @include align-content(space-evenly);
+}
+
+:global .align-content-stretch {
+  @include align-content(stretch);
+}
+
+:global .flex-wrap {
+  @include flex-wrap;
+}
+
+:global .flex-wrap-reverse {
+  @include flex-wrap-reverse;
+}
+
+:global .flex-no-wrap {
+  @include flex-no-wrap;
+}
+
+@include breakpoint-max(tablet) {
+  :global .tablet-display-flex {
+    @include flex;
+  }
+  
+  :global .tablet-display-flex-inline {
+    @include flex-inline;
+  }
+  
+  :global .tablet-flex-row {
+    @include flex-row;
+  }
+  
+  :global .tablet-flex-row-reverse {
+    @include flex-row-reverse;
+  }
+  
+  :global .tablet-flex-column {
+    @include flex-column;
+  }
+  
+  :global .tablet-flex-column-reverse {
+    @include flex-column-reverse;
+  }
+  
+  :global .tablet-justify-content-center {
+    @include justify-content(center);
+  }
+  
+  :global .tablet-justify-content-space-between {
+    @include justify-content(space-between);
+  }
+  
+  :global .tablet-justify-content-space-around {
+    @include justify-content(space-around);
+  }
+
+  :global .tablet-justify-content-space-evenly {
+    @include justify-content(space-evenly);
+  }
+  
+  :global .tablet-justify-content-start {
+    @include justify-content(start);
+  }
+  
+  :global .tablet-justify-content-end {
+    @include justify-content(end);
+  }
+  
+  :global .tablet-align-items-start {
+    @include align-items(start);
+  }
+  
+  :global .tablet-align-items-end {
+    @include align-items(end);
+  }
+  
+  :global .tablet-align-items-center {
+    @include align-items(center);
+  }
+  
+  :global .tablet-align-items-baseline {
+    @include align-items(baseline);
+  }
+  
+  :global .tablet-align-items-stretch {
+    @include align-items(stretch);
+  }
+  
+  :global .tablet-align-self-start {
+    @include align-self(start);
+  }
+  
+  :global .tablet-align-self-end {
+    @include align-self(end);
+  }
+  
+  :global .tablet-align-self-center {
+    @include align-self(center);
+  }
+  
+  :global .tablet-align-self-baseline {
+    @include align-self(baseline);
+  }
+  
+  :global .tablet-align-self-stretch {
+    @include align-self(stretch);
+  }
+  
+  :global .tablet-align-content-start {
+    @include align-content(start);
+  }
+  
+  :global .tablet-align-content-end {
+    @include align-content(end);
+  }
+  
+  :global .tablet-align-content-center {
+    @include align-content(center);
+  }
+  
+  :global .tablet-align-content-space-between {
+    @include align-content(space-between);
+  }
+  
+  :global .tablet-align-content-space-around {
+    @include align-content(space-around);
+  }
+
+  :global .tablet-align-content-space-evenly {
+    @include align-content(space-evenly);
+  }
+  
+  :global .tablet-align-content-stretch {
+    @include align-content(stretch);
+  }
+
+  :global .tablet-flex-wrap {
+    @include flex-wrap;
+  }
+  
+  :global .tablet-flex-wrap-reverse {
+    @include flex-wrap-reverse;
+  }
+  
+  :global .tablet-flex-no-wrap {
+    @include flex-no-wrap;
+  }
+}
+
+@include breakpoint-max(phone-xlg) {
+  :global .phone-display-flex {
+    @include flex;
+  }
+  
+  :global .phone-display-flex-inline {
+    @include flex-inline;
+  }
+  
+  :global .phone-flex-row {
+    @include flex-row;
+  }
+  
+  :global .phone-flex-row-reverse {
+    @include flex-row-reverse;
+  }
+  
+  :global .phone-flex-column {
+    @include flex-column;
+  }
+  
+  :global .phone-flex-column-reverse {
+    @include flex-column-reverse;
+  }
+  
+  :global .phone-justify-content-center {
+    @include justify-content(center);
+  }
+  
+  :global .phone-justify-content-space-between {
+    @include justify-content(space-between);
+  }
+  
+  :global .phone-justify-content-space-around {
+    @include justify-content(space-around);
+  }
+
+  :global .phone-justify-content-space-evenly {
+    @include justify-content(space-evenly);
+  }
+  
+  :global .phone-justify-content-start {
+    @include justify-content(start);
+  }
+  
+  :global .phone-justify-content-end {
+    @include justify-content(end);
+  }
+  
+  :global .phone-align-items-start {
+    @include align-items(start);
+  }
+  
+  :global .phone-align-items-end {
+    @include align-items(end);
+  }
+  
+  :global .phone-align-items-center {
+    @include align-items(center);
+  }
+  
+  :global .phone-align-items-baseline {
+    @include align-items(baseline);
+  }
+  
+  :global .phone-align-items-stretch {
+    @include align-items(stretch);
+  }
+  
+  :global .phone-align-self-start {
+    @include align-self(start);
+  }
+  
+  :global .phone-align-self-end {
+    @include align-self(end);
+  }
+  
+  :global .phone-align-self-center {
+    @include align-self(center);
+  }
+  
+  :global .phone-align-self-baseline {
+    @include align-self(baseline);
+  }
+  
+  :global .phone-align-self-stretch {
+    @include align-self(stretch);
+  }
+  
+  :global .phone-align-content-start {
+    @include align-content(start);
+  }
+  
+  :global .phone-align-content-end {
+    @include align-content(end);
+  }
+  
+  :global .phone-align-content-center {
+    @include align-content(center);
+  }
+  
+  :global .phone-align-content-space-between {
+    @include align-content(space-between);
+  }
+  
+  :global .phone-align-content-space-around {
+    @include align-content(space-around);
+  }
+
+  :global .phone-align-content-space-evenly {
+    @include align-content(space-evenly);
+  }
+  
+  :global .phone-align-content-stretch {
+    @include align-content(stretch);
+  }
+
+  :global .phone-flex-wrap {
+    @include flex-wrap;
+  }
+  
+  :global .phone-flex-wrap-reverse {
+    @include flex-wrap-reverse;
+  }
+  
+  :global .phone-flex-no-wrap {
+    @include flex-no-wrap;
   }
 }
 
@@ -271,7 +717,7 @@
 }
 
 @for $i from 1 through 12 {
-  @include breakpoint-tablet {
+  @include breakpoint-max(tablet) {
     :global .tablet-order-#{$i} {
       order: #{$i} !important;
     }
@@ -279,7 +725,7 @@
 }
 
 @for $i from 1 through 12 {
-  @include breakpoint-phone-xlg {
+  @include breakpoint-max(phone-xlg) {
     :global .phone-order-#{$i} {
       order: #{$i} !important;
     }
@@ -290,7 +736,6 @@
 // Responsive Helpers
 // **************************************
 @media (min-width: 992px) {
-
   :global .desktop-only {
     display: block !important;
   }
@@ -301,7 +746,6 @@
 }
 
 @media (max-width: 991px) {
-
   :global .desktop-only {
     display: none !important;
   }

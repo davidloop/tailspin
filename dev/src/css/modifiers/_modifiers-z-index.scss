@@ -9,7 +9,7 @@
     }
 }
 
-@include breakpoint-tablet {
+@include breakpoint-max(tablet) {
     @for $j from $increment-z-index through $max-z-index {
         @if ($j + $increment-z-index) % $increment-z-index == 0 {
             :global  .tablet-z-index-#{$j} {
@@ -19,7 +19,7 @@
     }
 }
 
-@include breakpoint-phone-xlg {
+@include breakpoint-max(phone-xlg) {
     @for $h from $increment-z-index through $max-z-index {
         @if ($h + $increment-z-index) % $increment-z-index == 0 {
             :global  .phone-z-index-#{$h} {
