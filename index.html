@@ -2332,9 +2332,56 @@
 			<div class="row">
 				<div class="col-xl-5">
 					<hr class="margin-top-bottom-30">
+					<p><strong>Examples</strong></p>
+					<div class="display-flex padding-top-20 padding-bottom-10">
+						<a href="#" class="js-example-as-a margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: whitesmoke; text-decoration: none;">Start</a>
+						<a href="#" class="js-example-as-b margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">End</a>
+						<a href="#" class="js-example-as-c margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Center</a>
+						<a href="#" class="js-example-as-d margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Baseline</a>
+						<a href="#" class="js-example-as-e margin-right-10 padding-top-bottom-8 padding-left-right-12 border border-radius-5 font-size-14" style="background: white; text-decoration: none;">Stretch</a>
+					</div>
+					<div style="height: 200px;" class="display-flex padding-10 border js-example-as-target">
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14 align-self-start" style="border-color: silver !important;">1</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14 align-self-start" style="border-color: silver !important;">2</div>
+						<div class="margin-10 padding-top-bottom-15 padding-left-right-20 border font-size-14 align-self-start" style="border-color: silver !important;">3</div>
+					</div>
+					<p class="margin-top-15 blue">align-self-start</p>
 				</div>
 				<div class="col-xl-7">
 					<hr class="margin-top-bottom-30">
+					<p><strong>Result</strong></p>
+					<p>The following example uses responsive breakpoints to change the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">Align Self</a> property of the individual &lt;div&gt; child blocks. The parent container must have a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout" target="_blank">Flex</a> display property for the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self" target="_blank">Align Self</a> property to work. Resize the browser to see the align self utility classes in action.</p>
+					<p><strong>Code</strong></p>
+					<div class="highlight">
+<pre>&lt;div&gt;
+   &lt;div class="<span style="color: crimson;">align-self-center tablet-align-self-stretch</span>"&gt;
+      Div Block 1
+   &lt;/div&gt;
+
+   &lt;div class="<span style="color: crimson;">align-self-stretch tablet-align-self-center</span>"&gt;
+      Div Block 2
+   &lt;/div&gt;
+
+   &lt;div class="<span style="color: crimson;">align-self-center tablet-align-self-stretch</span>"&gt;
+      Div Block 3
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+					</div>
+					
+					<div class="highlight mint">
+						 <div style="height: 200px; background: white;" class="display-flex padding-10 border">
+							<div class="margin-10 padding-20 border align-self-center tablet-align-self-stretch">
+								Div Block 1
+							</div>
+							<div class="margin-10 padding-20 border align-self-stretch tablet-align-self-center">
+								Div Block 2
+							</div>
+							<div class="margin-10 padding-20 border align-self-center tablet-align-self-stretch">
+								Div Block 3
+							</div>
+						 </div>
+					</div>
+
 					<hr class="margin-top-bottom-30">
 					<p><strong>Supported class name patterns:</strong></p>
 					<div class="row margin-top-20">
@@ -3678,6 +3725,9 @@
 	$(aiD).on('click', aiTargetD);
 	$(aiE).on('click', aiTargetE);
 
+	// Align self example
+	
+
 	// Shake animation
 	function boxShake(e) {
 		e.preventDefault();
@@ -3817,6 +3867,8 @@
 	// Year
 	document.querySelector('.year').innerHTML = new Date().getFullYear();
 </script>
+
+<script type="text/javascript" src="/samples/js/js-sample-align-self.js"></script>
 
 </body>
 </html>
