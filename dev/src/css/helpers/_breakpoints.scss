@@ -1,48 +1,55 @@
 
-@mixin breakpoint-desktop-lg {
-    @media (max-width: ($breakpoint-desktop-large - 1px)) {
-        @content;
-    }
+$breakpoints: (
+    desktop-lg:     $breakpoint-desktop-large,
+    desktop-md:     $breakpoint-desktop-medium,
+    desktop-sm:     $breakpoint-desktop-small,
+    tablet:         $breakpoint-tablet,
+    phone-xlg:      $breakpoint-phone-extralarge,
+    phone-lg:       $breakpoint-phone-large,
+    phone-md:       $breakpoint-phone-medium,
+    phone-sm:       $breakpoint-phone-small,
+);
+
+// Max-width
+// the given screen size or smaller
+// **************************************
+@mixin breakpoint-max($name, $breakpoint: $breakpoints) {
+
+    $values: map-values($map: $breakpoints);
+    $last-value: nth($values, 8);
+    $max_breakpoint: map-get($breakpoint, $name);
+
+    @if $last-value > 0 {
+        @media (max-width: ($max_breakpoint - 1px)) {
+            @content;
+        }
+    } @else {
+        @warn "The '$breakpoint-phone-small' value in the _vars.scss file must be greater than 0."
+    };
 }
 
-@mixin breakpoint-desktop-md {
-    @media (max-width: ($breakpoint-desktop-medium - 1px)) {
-        @content;
-    }
+// Min-width
+// the given screen size or larger
+// **************************************
+@mixin breakpoint-min($name, $breakpoint: $breakpoints) {
+    
+    $values: map-values($map: $breakpoints);
+    $last-value: nth($values, 8);
+    $min_breakpoint: map-get($breakpoint, $name);
+
+    @if $last-value > 0 {
+        @media (min-width: ($min_breakpoint - 0px)) {
+            @content;
+        }
+    } @else {
+        @warn "The '$breakpoint-phone-small' value in the _vars.scss file must be greater than 0."
+    };
 }
 
-@mixin breakpoint-desktop-sm {
-    @media (max-width: ($breakpoint-desktop-small - 1px)) {
-        @content;
-    }
-}
-
-@mixin breakpoint-tablet {
-    @media (max-width: ($breakpoint-tablet - 1px)) {
-        @content;
-    }
-}
-
-@mixin breakpoint-phone-xlg {
-    @media (max-width: ($breakpoint-phone-extralarge - 1px)) {
-        @content;
-    }
-}
-
-@mixin breakpoint-phone-lg {
-    @media (max-width: ($breakpoint-phone-large - 1px)) {
-        @content;
-    }
-}
-
-@mixin breakpoint-phone-md {
-    @media (max-width: ($breakpoint-phone-medium - 1px)) {
-        @content;
-    }
-}
-
-@mixin breakpoint-phone-sm {
-    @media (max-width: ($breakpoint-phone-small - 1px)) {
+// Tables
+// **************************************
+@mixin breakpoint-table {
+    @media (max-width: ($breakpoint-table - 1px)) {
         @content;
     }
 }

@@ -13,6 +13,7 @@ var __webpack_exports__ = {};
 
 
 
+
  // js
 
 
@@ -51,6 +52,11 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 (() => {
 /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ("dist/prod/css/tailspin-modifiers-opacity.min.css");
+})();
+
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+(() => {
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ("dist/prod/css/tailspin-modifiers-tables.min.css");
 })();
 
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.

@@ -29,12 +29,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_tailspin_modifiers_font_size_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/tailspin-modifiers-font-size.scss */ "./src/css/tailspin-modifiers-font-size.scss");
 /* harmony import */ var _css_tailspin_modifiers_border_radius_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/tailspin-modifiers-border-radius.scss */ "./src/css/tailspin-modifiers-border-radius.scss");
 /* harmony import */ var _css_tailspin_modifiers_opacity_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../css/tailspin-modifiers-opacity.scss */ "./src/css/tailspin-modifiers-opacity.scss");
-/* harmony import */ var _css_tailspin_modifiers_z_index_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../css/tailspin-modifiers-z-index.scss */ "./src/css/tailspin-modifiers-z-index.scss");
-/* harmony import */ var _css_tailspin_utilities_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/tailspin-utilities.scss */ "./src/css/tailspin-utilities.scss");
-/* harmony import */ var _css_tailspin_utilities_ratios_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/tailspin-utilities-ratios.scss */ "./src/css/tailspin-utilities-ratios.scss");
-/* harmony import */ var _css_tailspin_utilities_typography_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../css/tailspin-utilities-typography.scss */ "./src/css/tailspin-utilities-typography.scss");
-/* harmony import */ var _js_fill_media_to_container_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../js/fill.media.to.container.js */ "./src/js/fill.media.to.container.js");
+/* harmony import */ var _css_tailspin_modifiers_tables_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../css/tailspin-modifiers-tables.scss */ "./src/css/tailspin-modifiers-tables.scss");
+/* harmony import */ var _css_tailspin_modifiers_z_index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../css/tailspin-modifiers-z-index.scss */ "./src/css/tailspin-modifiers-z-index.scss");
+/* harmony import */ var _css_tailspin_utilities_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../css/tailspin-utilities.scss */ "./src/css/tailspin-utilities.scss");
+/* harmony import */ var _css_tailspin_utilities_ratios_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../css/tailspin-utilities-ratios.scss */ "./src/css/tailspin-utilities-ratios.scss");
+/* harmony import */ var _css_tailspin_utilities_typography_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../css/tailspin-utilities-typography.scss */ "./src/css/tailspin-utilities-typography.scss");
+/* harmony import */ var _js_fill_media_to_container_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../js/fill.media.to.container.js */ "./src/js/fill.media.to.container.js");
 // styles
+
 
 
 
@@ -131,6 +133,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("dist/dev/css/tailspin-modifiers-opacity.css");
+
+/***/ }),
+
+/***/ "./src/css/tailspin-modifiers-tables.scss":
+/*!************************************************!*\
+  !*** ./src/css/tailspin-modifiers-tables.scss ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("dist/dev/css/tailspin-modifiers-tables.css");
 
 /***/ }),
 
@@ -258,6 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__("./src/css/tailspin-modifiers-font-size.scss");
 /******/ 	__webpack_require__("./src/css/tailspin-modifiers-border-radius.scss");
 /******/ 	__webpack_require__("./src/css/tailspin-modifiers-opacity.scss");
+/******/ 	__webpack_require__("./src/css/tailspin-modifiers-tables.scss");
 /******/ 	__webpack_require__("./src/css/tailspin-modifiers-z-index.scss");
 /******/ 	__webpack_require__("./src/css/tailspin-utilities.scss");
 /******/ 	__webpack_require__("./src/css/tailspin-utilities-ratios.scss");

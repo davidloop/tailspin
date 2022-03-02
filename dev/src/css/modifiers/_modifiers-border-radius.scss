@@ -8,7 +8,7 @@
 }
 
 @for $i from 0 through $max-border-radius {
-    @include breakpoint-tablet {
+    @include breakpoint-max(tablet) {
         :global .tablet-border-radius-#{$i} {
             border-radius: #{$i}px !important;
         }
@@ -16,7 +16,7 @@
 }
 
 @for $i from 0 through $max-border-radius {
-    @include breakpoint-phone-xlg {
+    @include breakpoint-max(phone-xlg) {
         :global .phone-border-radius-#{$i} {
             border-radius: #{$i}px !important;
         }

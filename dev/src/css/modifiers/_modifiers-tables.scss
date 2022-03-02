@@ -1,0 +1,132 @@
+
+// Tables
+// **************************************
+:global .table {
+    width: 100% !important;
+    margin: 0 !important;
+    background: white !important;
+    border: 1px solid $default-border-color !important;
+    border-bottom: none !important;
+    border-collapse: collapse;
+
+    caption {
+        padding: 15px 0;
+        color: black;
+        text-align: center;
+        caption-side: top;
+    }
+
+    thead th {
+        text-align: -webkit-match-parent;
+        vertical-align: bottom;
+    }
+
+    td, th {
+        padding: 12px !important;
+        border: none !important;
+        border-bottom: 1px solid $default-border-color !important;
+        border-right: 1px solid $default-border-color !important;
+        vertical-align: top;
+
+        &:last-of-type {
+            border-right: none !important;
+        }
+    }
+
+    &.table-dark {
+        color: white;
+
+        td, th {
+            background: #303336 !important;
+        }
+    }
+
+    &.table-stripped {
+
+        thead tr {
+            background: #fcfcfc;
+        }
+
+        tbody tr:nth-child(odd) {
+            background: #f5f5f5;
+        }
+
+        td, th {
+            border-right: none !important;
+        }
+
+        &.table-dark {
+
+            thead tr th {
+                background: #303336 !important;
+            }
+
+            tbody tr:nth-child(odd) td {
+                background: #1e1f21 !important;
+            }
+        }
+    }
+
+    &.table-centered {
+
+        td, th {
+            text-align: center;
+        }
+    }
+}
+
+@include breakpoint-table {
+    :global .table {
+        border: none !important;
+
+        caption {
+            padding: 10px 0;
+        }
+
+        thead {
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        tr, td {
+            border-bottom: 1px solid $default-border-color !important;
+            display: block;
+        }
+
+        tr {
+            margin-bottom: 30px;
+        }
+
+        td {
+            border-left: 1px solid $default-border-color !important;
+            text-align: right;
+
+            &:first-of-type {
+                border-top: 1px solid $default-border-color !important;
+            }
+
+            &:last-of-type {
+                border-right: 1px solid $default-border-color !important;
+                border-bottom: none !important;
+            }
+
+            &::before {
+                content: attr(data-label);
+                font-weight: bold;
+                float: left;
+            }
+        }
+
+        &.table-stripped {
+
+            td {
+                border-right: 1px solid $default-border-color !important;
+            }
+        }
+    }
+}

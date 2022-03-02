@@ -11,62 +11,112 @@
 // Flex
 // **************************************
 @mixin flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
 }
 
 @mixin flex-inline {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
   display: inline-flex !important;
 }
 
-@mixin justify-content-center {
-  justify-content: center !important;
-}
-
-@mixin justify-content-between {
-  justify-content: space-between !important;
-}
-
-@mixin justify-content-around {
-  justify-content: space-around !important;
-}
-
-@mixin justify-content-start {
-  justify-content: flex-start !important;
-}
-
-@mixin justify-content-end {
-  justify-content: flex-end !important;
-}
-
-@mixin align-items-center {
-  align-items: center !important;
-}
-
-@mixin align-items-start {
-  align-items: flex-start !important;
-}
-
-@mixin align-items-end {
-  align-items: flex-end !important;
-}
-
-@mixin align-items-stretch {
-  align-items: stretch !important;
-}
-
 @mixin flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
   flex-direction: row !important;
 }
 
+@mixin flex-row-reverse {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: row-reverse !important;
+  flex-direction: row-reverse !important;
+}
+
 @mixin flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
   flex-direction: column !important;
 }
 
+@mixin flex-column-reverse {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: column-reverse !important;
+  flex-direction: column-reverse !important;
+}
+
+$justify-content: (
+  start:          start,
+  end:            end,
+  center:         center,
+  space-between:  space-between,
+  space-around:   space-around,
+  space-evenly:   space-evenly,
+);
+
+@mixin justify-content($name, $justify-content: $justify-content) {
+  $value: map-get($justify-content, $name);
+  justify-content: $value !important; 
+}
+
+$align-items: (
+  start:          start,
+  end:            end,
+  center:         center,
+  baseline:       baseline,
+  stretch:        stretch,
+);
+
+@mixin align-items($name, $align-items: $align-items) {
+  $value: map-get($align-items, $name);
+  align-items: $value !important; 
+}
+
+$align-self: (
+  start:          start,
+  end:            end,
+  center:         center,
+  baseline:       baseline,
+  stretch:        stretch,
+);
+
+@mixin align-self($name, $align-self: $align-self) {
+  $value: map-get($align-self, $name);
+  align-self: $value !important; 
+}
+
+$align-content: (
+  start:          start,
+  end:            end,
+  center:         center,
+  space-between:  space-between,
+  space-around:   space-around,
+  space-evenly:   space-evenly,
+  stretch:        stretch,
+);
+
+@mixin align-content($name, $align-content: $align-content) {
+  $value: map-get($align-content, $name);
+  align-content: $value !important;
+}
+
 @mixin flex-wrap {
+  -ms-flex-wrap: wrap !important;
   flex-wrap: wrap !important;
 }
 
+@mixin flex-wrap-reverse {
+  -ms-flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap-reverse !important;
+}
+
 @mixin flex-no-wrap {
+  -ms-flex-wrap: nowrap !important;
   flex-wrap: nowrap !important;
 }
 
