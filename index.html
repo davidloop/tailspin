@@ -253,7 +253,7 @@
 	}
 
 	.menu-trigger.open {
-		left: 310px;
+		left: 370px;
 	}
 	
 	.menu-trigger.open span:nth-of-type(1) {
@@ -271,14 +271,15 @@
 	}
 
 	.menu-target {
-		height: 100vh;
+		height: 101vh;
 		width: 350px;
-		padding: 45px 0 0 0;
+		padding: 45px 0 90px 0;
 		background: slategrey;
 		position: fixed;
 		top: 0;
 		left: -350px;
 		z-index: 3;
+		overflow-y: auto;
 		transition: left 0.15s ease-out;
 	}
 

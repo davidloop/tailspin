@@ -555,26 +555,22 @@
     $(".menu-target a").on('click', goToSection);
 
     // Back to top
-    // This is plain JavaScript
-    // John says it's the best
-    const el = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
+    let el = $(".back-to-top");
+    $(window).on('scroll', () => {
         const scrolled = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if ( scrolled > 900 ) {
-            el.classList.add('visible');
+        if ( scrolled > 500 ) {
+            $(el).addClass('visible');
         } else {
-            el.classList.remove('visible');
+            $(el).removeClass('visible');
         }
     });
 
-    function scrollToTop(e) {
+    $(el).on('click', (e) => {
         e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-    el.addEventListener('click', scrollToTop);
+        $("html, body").animate({
+            scrollTop: $("[id=top]").offset().top
+        }, 200);
+    });
 
     // Year
     document.querySelector('.year').innerHTML = new Date().getFullYear();
